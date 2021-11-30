@@ -20,6 +20,7 @@ function theme_register_nav_menu() {
 add_action( 'carbon_fields_register_fields', 'so_register_custom_fields' );
 function so_register_custom_fields() {
 	require get_template_directory() . '/includes/custom-fields-option/metabox.php';
+	require get_template_directory() . '/includes/custom-fields-option/metabox2.php';
 	require get_template_directory() . '/includes/custom-fields-option/theme-option.php';
 }
 
