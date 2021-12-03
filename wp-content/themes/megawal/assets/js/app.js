@@ -1,10 +1,6 @@
 let submenu = document.querySelector('.sub-menu');
 let menuitem = document.querySelectorAll('.menu-item');
 
-
-
-
-
  let closer = document.createElement('div'),
  activEntry;
  closer.className = "closer";
@@ -37,6 +33,7 @@ closer.addEventListener("click", function (event){
 //owl carousel
 
 var bunerSlider = $('.bunerSlider');
+var main_carousel_projects = $('#main_carousel_projects');
 
 $(document).ready(function(){
 
@@ -53,34 +50,19 @@ $(document).ready(function(){
         loop:"true"
     });
 
+    main_carousel_projects.find(".owl-carousel").owlCarousel({
+        items:1,
+        dots: true,
+        nav: true,
+        lazyLoad: true,
+        navContainer: ".navBtnCarousel",
+        dotsContainer: "#icons_projects",
+        rewind: true,
+        autoplay: true,
+        loop:"true"
+    });
   });
-//   --------------- PROJECTS --------------------
-let slider = multiItemSlider('.project_1', {
-    isCycling: true
-});
-document.querySelector('.main_photo_project').classList.add('active');
 
-function open_project(data, ev){
-
-    let dots = document.getElementsByClassName('main_photo_project');
-    for(var i = 0; i < dots.length; i++){
-        ev === dots[i] ? dots[i].classList.add('active') : dots[i].classList.remove('active');
-    }
-
-
-    let x = document.getElementsByClassName("project");
-    for (let i = 0; i < x.length; i++) {
-
-        if(x[i].id === data.id){
-            x[i].style.display = '';
-            slider = multiItemSlider('.'+ data.id, {
-                isCycling: true
-            })
-        }else{
-            x[i].style.display = "none";
-        }
-    }
-}
 // ------------------виды офисных прегородок-------------------
 
 
@@ -120,9 +102,9 @@ var $tabs = function (target) {
           _showTab(tabsLinks[tabsLinkIndex - 1]);
         }
       };
-    
+
     _eventTabsShow = new CustomEvent('tab.show', { detail: _elemTabs });
-    
+
     _elemTabs.addEventListener('click', function (e) {
       var tabsLinkTarget = e.target;
       // завершаем выполнение функции, если кликнули не по ссылке
@@ -133,7 +115,7 @@ var $tabs = function (target) {
       e.preventDefault();
       _showTab(tabsLinkTarget);
     });
-    
+
     return {
       showTab: function (target) {
         _showTab(target);
@@ -142,7 +124,7 @@ var $tabs = function (target) {
         _switchTabTo(index);
       }
     }
-    
+
     };
-    
+
     $tabs('.tabs');
