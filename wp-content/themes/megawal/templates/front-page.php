@@ -145,7 +145,54 @@ echo '<div class="partition_tabs">
                         </div>
                     </div>       
        </div>';
+ $first_clean_background = carbon_get_post_meta( $post->ID, 'first_clean_background' );
+
+ echo '<div class="first_clean" style="background-image: url(' .
+ wp_get_attachment_image_url( $first_clean_background, 'full' ) .
+  ')"><div class="clean_text">'. carbon_get_post_meta(get_the_ID(), 'first_clean_text') .'
+ <a href="/wp-content/themes/megawal/popups/modal-price.html" class="btn btn-sm btn-yellow btn--icon-check topopup fancybox.ajax"> Узнать подробности и сделать заказ </a>
+ </div>
+ </div>';
+
+ 
+ echo '<h2 class="partners_h2">' . blue_title('Почему стоит обратиться к нам') . '</h2><div class="partners_all ">';
+
+ 
+ $why_are_we = carbon_get_post_meta( $post->ID, 'why_are_we' );
+ $why_pos=0;
+ echo '<div class="why_are_we">';
+ foreach ($why_are_we as $why_are_we_item){
+     if($why_pos++%2==0){$pos="_r";}else{$pos="_l";}
+     $why_are_we_item['why_color']? $why_color="color_text_white": $why_color="";
+    if(!empty($why_are_we_item)){        
+ echo '<div class="why_are_we_box'. $pos .'" style="background-image: url(' .
+  wp_get_attachment_image_url( $why_are_we_item['why_are_we_background'] , 'full' ) . ')">
+  <div class="why_are_we_text '. $why_color .'">'. $why_are_we_item['why_are_we_text'] .'</div>
+ </div>';       
+    }}
+echo '</div>';
+
+
    ?>
+   
+<div class="tbs">
+<div class="tb_button">
+  <a class="tb_but tbb_act" href="#content-1">Вкладка 1</a>
+  <a class="tb_but" href="#content-2">Вкладка 2</a>
+  <a class="tb_but" href="#content-3">Вкладка 3</a>
+</div>
+<div class="tb_content">
+  <div class="tb_cnt tbc_act" id="content-1">
+    Содержимое 1...
+  </div>
+  <div class="tb_cnt" id="content-2">
+    Содержимое 2...
+  </div>
+  <div class="tb_cnt" id="content-3">
+    Содержимое 3...
+  </div>
+</div>
+</div>
 </div>
 
 </main>
@@ -159,6 +206,4 @@ echo '<div class="partition_tabs">
 // alt
 // carbon_get_the_post_meta("description") .
 
-  
-     
-             
+ 
