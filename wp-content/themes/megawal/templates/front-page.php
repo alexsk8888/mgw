@@ -27,6 +27,7 @@ Template Name: Main page
             endforeach;
     endif;
 ?></div>
+
 <!--  Выполненные проекты -->
 
 <?php
@@ -36,37 +37,29 @@ Template Name: Main page
 
  echo "<div id='projects'>";
 echo   "<div class='projects_info'>
-          <div id='main_carousel_projects'>";
+          <div id='main_carousel_projects'>
+           <div class='owl-carousel'>";
 
  foreach ($slider_projects as $slide_item){
      if(!empty($slide_item)){
      $num++;
-     echo "<div id='".$slide_item['id']."' class='slider_projects project' style=' display:". $slide_item['display'] . "'>
-         <div class='slider_description'>" . $slide_item['description'] . "</div>
-            <div class='slider_img_container project_".$num."'>
-                 <div class='slider_wrapper'>";
-
-         foreach ( $slide_item['slider_projects_item'] as $item){
-
-                 if( ! $item[ 'photo' ] ) {
-                     continue;
-                 }
-                        echo '<div class="slider_item">'.
-                               wp_get_attachment_image( $item['photo'],
+     echo "<div id='".$slide_item['id']."' class='slider_item'> 
+                 <div class='slider_description'>" . $slide_item['description'] . "</div> 
+                 <div class='slider_photo'>"; // start slider_photo
+                 foreach ( $slide_item['slider_projects_item'] as $item){
+                        echo  wp_get_attachment_image( $item['photo'],
                                  'medium', '', array( 'alt' => $item['alt'],));
-                        echo '</div>';
-
                  }
+           echo  "</div>";              // end slider_photo
+         echo  "</div>";        // end  slider_item
+         }
+       }
+     echo "</div></div>";  // end slider_wrapper/ / end main_carousel_projects
+//         echo "<a class='slider_control slider_control_left slider_control_show' href='#' role='button'></a>
+//		       <a class='slider_control slider_control_right slider_control_show' href='#' role='button'></a>
+//		  ";
 
-         echo  "</div>
-                 <a class='slider_control slider_control_left slider_control_show' href='#' role='button'></a>
-		         <a class='slider_control slider_control_right slider_control_show' href='#' role='button'></a>
-             </div>
-         </div>";
-
-     }
-}
-  echo "</div><div id='icons_projects'>";
+ echo "<div id='icons_projects'>";
  foreach ($main_photo_projects as $main_photo_item){
      if(!empty($main_photo_item)){
          echo "<div class='main_photo_project' role='button'
@@ -75,7 +68,7 @@ echo   "<div class='projects_info'>
              . "</div>";
      }
  }
-   echo "</div></div></div>";
+   echo "</div></div>";
 
 ?>
 <!-- Наши заказчики и партнеры -->
