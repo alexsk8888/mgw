@@ -11,6 +11,7 @@
 #projects{
   background: #eef0fd;
   width: 100%;
+  max-width: 100vw;
   padding: 20px;
 
   .projects_info{
@@ -33,33 +34,38 @@
         max-width: 100%;
         transition: transform 1s ease;
 
-        .slider_item{
-          display: flex;
-          flex-direction: row;
-          flex-wrap: nowrap;
-          height: var(--slider_height);
-          width: var(--slider_width);
+        .owl-item {
+          max-width: var(--slider_width);
           overflow: hidden;
-          object-fit: cover;
 
-          .slider_description{
-            position: relative;
-            width: 300px;
-            min-height: 100%;
-            height: 100%;
-            text-align: left;
-            background: white;
-            padding: 20px;
-          }
-
-          .slider_photo{
-            position: relative;
-            flex-grow: 1;
+          .slider_item {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
             height: var(--slider_height);
+            width: var(--slider_width);
             overflow: hidden;
-            margin: 0 auto;
             object-fit: cover;
 
+            .slider_description {
+              position: relative;
+              width: 300px;
+              min-height: 100%;
+              height: 100%;
+              text-align: left;
+              background: white;
+              padding: 20px;
+            }
+
+            .slider_photo {
+              position: relative;
+              flex-grow: 1;
+              height: var(--slider_height);
+              overflow: hidden;
+              margin: 0 auto;
+              object-fit: cover;
+
+            }
           }
         }
       }
@@ -105,41 +111,138 @@
   flex-wrap: nowrap;
 }
 
-@media (max-width: 1300px) {
+@media only screen and (max-width: 1300px) {
   :root{
     --slider_width: 1000px;
   }
 }
-@media (max-width: 1100px) {
+@media only screen and (max-width: 1100px) {
   :root{
     --slider_width: 900px;
   }
 }
-@media (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
   :root{
     --slider_width: 800px;
   }
 
-  //#main_carousel_projects{
-  //  .slider_item{
-  //    flex-direction: column;
-  //
-  //    .slider_description{
-  //      min-height: 200px;
-  //      height: auto;
-  //      flex-grow: 1;
-  //    }
-  //
-  //    .slider_photo{
-  //      order: 0;
-  //      flex-grow: 1;
-  //      height: 400px;
-  //    }
-  //  }
-  //}
+  #projects {
+
+    .projects_info {
+
+      #main_carousel_projects {
+        height: auto;
+        min-height: 700px;
+        .owl-carousel {
+          max-height: 100%;
+
+          .owl-item {
+            max-width: var(--slider_width);
+
+            .slider_item {
+              flex-direction: column !important;
+              height: auto;
+
+              .slider_description {
+                order: 1;
+                min-height: 250px;
+                height: auto;
+                flex-grow: 1;
+                min-width: 100%;
+                width: 100%;
+
+                h4 {
+                  margin-top: 0;
+                }
+              }
+
+              .slider_photo {
+                order: 0;
+                flex-grow: 1;
+                height: 450px;
+                min-height: 450px;
+                min-width: 100%;
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+      #icons_projects{
+        .main_photo_project{
+          height: auto;
+        }
+      }
+    }
+  }
 
 }
-@media (max-width: 700px) {
+@media only screen and (max-width: 700px) {
+  :root{
+    --slider_width: 550px;
+  }
 
+}
+@media only screen and (max-width: 600px) {
+  :root{
+    --slider_width: 450px;
+  }
+  #projects {
+    .projects_info {
+
+      #main_carousel_projects {
+        min-height: auto;
+        .owl-carousel {
+
+          .owl-item {
+
+            .slider_item {
+
+              .slider_description {
+                min-height: 300px;
+              }
+
+              .slider_photo {
+                height: 300px;
+                min-height: 300px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 500px) {
+  :root{
+    --slider_width: 400px;
+  }
+  #projects {
+    .projects_info {
+
+      #main_carousel_projects {
+
+        .owl-carousel {
+
+          .owl-item {
+
+            .slider_item {
+
+              .slider_description {
+                min-height: 350px;
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  :root{
+    --slider_width: 360px;
+  }
 
 }
