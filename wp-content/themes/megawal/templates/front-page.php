@@ -147,18 +147,21 @@ echo '<div class="partition_tabs">
        </div>';
  $first_clean_background = carbon_get_post_meta( $post->ID, 'first_clean_background' );
 
+ if(!empty($first_clean_background)){
  echo '<div class="first_clean" style="background-image: url(' .
  wp_get_attachment_image_url( $first_clean_background, 'full' ) .
   ')"><div class="clean_text">'. carbon_get_post_meta(get_the_ID(), 'first_clean_text') .'
  <a href="/wp-content/themes/megawal/popups/modal-price.html" class="btn btn-sm btn-yellow btn--icon-check topopup fancybox.ajax"> Узнать подробности и сделать заказ </a>
  </div>
  </div>';
-
+ }
  
- echo '<h2 class="partners_h2">' . blue_title('Почему стоит обратиться к нам') . '</h2><div class="partners_all ">';
 
- 
+
  $why_are_we = carbon_get_post_meta( $post->ID, 'why_are_we' );
+ if(!empty($why_are_we)){
+ echo '<h2 class="partners_h2">' . blue_title('Почему стоит обратиться к нам') . '</h2><div class="partners_all ">';
+ 
  $why_pos=0;
  echo '<div class="why_are_we">';
  foreach ($why_are_we as $why_are_we_item){
@@ -171,10 +174,11 @@ echo '<div class="partition_tabs">
  </div>';       
     }}
 echo '</div>';
-
+ }
 
 
 $tabs = carbon_get_post_meta( $post->ID, 'views' );
+if(!empty($tabs)){
 $tbb_act='tbb_act';
 echo '
 <div class="tbs">
@@ -205,7 +209,7 @@ echo '
 endforeach;
 echo '</ul>
 </div>';
-
+}
  ?>
 </div>
 
