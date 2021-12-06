@@ -68,7 +68,7 @@ echo   "<div class='projects_info'>
              . "</div>";
      }
  }
-   echo "</div></div>";
+   echo "</div></div></div>";
 
 ?>
 <!-- Наши заказчики и партнеры -->
@@ -90,7 +90,7 @@ echo   "<div class='projects_info'>
      .'</div>';
 
        endforeach;
-       echo '</div>';
+       echo '</div></div>';
 endif;
 
 
@@ -160,7 +160,7 @@ echo '<div class="partition_tabs">
 
  $why_are_we = carbon_get_post_meta( $post->ID, 'why_are_we' );
  if(!empty($why_are_we)){
- echo '<h2 class="partners_h2">' . blue_title('Почему стоит обратиться к нам') . '</h2><div class="partners_all ">';
+ echo '<div class="why_are_we_box"><h2 class="why_are_we_h2">' . blue_title('Почему стоит обратиться к нам') . '</h2>';
  
  $why_pos=0;
  echo '<div class="why_are_we">';
@@ -173,14 +173,16 @@ echo '<div class="partition_tabs">
   <div class="why_are_we_text '. $why_color .'">'. $why_are_we_item['why_are_we_text'] .'</div>
  </div>';       
     }}
-echo '</div>';
+echo '</div></div>';
  }
 
 
 $tabs = carbon_get_post_meta( $post->ID, 'views' );
 if(!empty($tabs)){
 $tbb_act='tbb_act';
-echo '
+echo '<div class="tab_box" style="background-image: url(' .
+wp_get_attachment_image_url( carbon_get_the_post_meta("why_are_we_background_container") , 'full' ) . ')">
+<h2 class="why_are_we_h2">' . blue_title('Виды профилей') . '</h2>
 <div class="tbs">
 <ul class="tb_button">';
 
@@ -208,7 +210,9 @@ echo '
   if($tbc_act){$tbc_act='';}
 endforeach;
 echo '</ul>
-</div>';
+<div class="btn_tb"> <a href="" class="btn btn-yellow btn--icon-ruler">Вызвать замерщика</a></div>
+
+</div></div>';
 }
  ?>
 </div>

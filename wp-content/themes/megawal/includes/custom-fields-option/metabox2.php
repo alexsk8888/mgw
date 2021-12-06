@@ -19,8 +19,9 @@ Container::make("post_meta", "Первичная уборка")
 
     ->set_priority("high")
     ->show_on_template("templates/front-page.php")
- 
+    
     ->add_fields( array(     
+        Field::make( 'image', 'why_are_we_background_container', __( ' Фоновое изображение' ) ),
         Field::make( 'complex', 'why_are_we', 'Блок "плитка"  максимум 20шт' )->set_layout( 'tabbed-horizontal' )->set_max( 20 )
         ->add_fields( array( 
               Field::make( 'rich_text', 'why_are_we_text', __( ' Текст' ))->set_width( 50 ),

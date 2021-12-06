@@ -903,7 +903,7 @@ form .form-control {
   line-height: 24px;
   margin: 50px 0 0 15px;
 }
-.partners_h2{
+.partners_h2, .why_are_we_h2, .why_are_we_h2{
   text-align:center;
   margin-bottom: 66px;
   font-family: HelveticaBlack, Helvetica, Arial, sans-serif;
@@ -1200,4 +1200,24 @@ form .form-control {
   color: #fffefe;
   text-shadow: 0 1px 1px rgba(0, 0, 0, .75);
   position: relative;
+}
+
+.btn_tb {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 15px;
+}
+.btn_tb .btn{
+  padding: 15px 55px;
+  font-size: 17px;
+}
+.btn_tb .btn--icon-ruler:before {
+  content: "";
+  position: absolute;
+  background: url(assets/image/ico-btn-zamer.png) no-repeat;
+  width: 27px;
+  height: 27px;
+  left: 13px;
+  top: 10px;
 }
