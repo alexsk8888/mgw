@@ -78,12 +78,11 @@ Container::make( 'post_meta', __( 'Single project' ) )
     ->add_fields( array(
         Field::make( 'complex', 'slider_projects', 'Слайдер, максимум 35 изображений' )->set_layout( 'tabbed-vertical' )->set_max( 35 )
             ->add_fields( array(
-                Field::make( 'complex', 'slider_projects_item', 'Слайдер, максимум 5 изображений' )->set_layout( 'tabbed-vertical' )->set_max( 5 )
+                Field::make( 'complex', 'slider_projects_item', 'Изображений слайда' )->set_layout( 'tabbed-vertical' )
                     ->add_fields( array(
                         Field::make( 'image', 'photo', __( ' Photo' ) )->set_width( 50 ),
                         Field::make( 'text', 'alt', __( ' Альтернативный текст для изображения "Alt"' ) )->set_width( 50 ),
                     ) ),
-                Field::make( 'text', 'display', __( ' Стили' ))->set_width(50),
                 Field::make( 'text', 'id', __( ' Индификатор' ))->set_width(50),
                 Field::make( 'rich_text', 'description', __( ' Описание' ))->set_width(100),
 

@@ -58,3 +58,4 @@ $RECYCLE.BIN/
 wp-content/uploads/wc-logs/*
 
 wp-content/plugins/woocommerce-google-product-review-feed-for-google-shopping-ads
+wp-config.php
