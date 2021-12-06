@@ -8,7 +8,7 @@ Template Name: Main page
   get_template_part( 'template-parts/content', 'page' );
  ?>
  
-     <main id="primary" class="site-main">
+     <main  class="site-main">
      
   
 

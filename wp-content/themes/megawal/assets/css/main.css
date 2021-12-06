@@ -41,6 +41,112 @@
     }
 }
 
+/* first clean */
+.first_clean {
+    min-height: 615px;
+    height: fit-content;
+    position: relative;
+    z-index: 1;
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+    margin: 0 -50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.clean_text{
+    width: 679px;
+    margin-right: 18vw;
+    padding: 20px;
+    background: #ffffff54;
+    -webkit-box-shadow: 0px 0px 24px 12px rgba(255, 255, 255, 0.2);
+    -moz-box-shadow: 0px 0px 24px 12px rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 24px 12px rgba(255, 255, 255, 0.2);
+}
+.clean_text p{
+    font-family: HelveticaBold, Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    line-height: 1.4;
+    color: white;
+}
+
+.why_are_we{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.why_are_we_box_r {
+    display: flex;
+    width: 618px;
+    height: 310px;
+    margin: 10px;
+    justify-content: flex-start;
+}
+.why_are_we_box_r .why_are_we_text {
+    width: 50%;
+    margin: 25px;
+}
+.why_are_we_box_r h5 {
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    width: 250px;
+    margin-bottom: 20px;
+}
+.why_are_we_box_r p{
+    font-size: 16px;
+    white-space: normal;
+    width: 300px;
+    color: rgb(0, 0, 0);
+    font-family: HelveticaRegular, Helvetica, Arial, sans-serif;
+
+}
+.color_text_white h5, .color_text_white p{
+    color: #fff;
+}
+.why_are_we_box_l {
+    display: flex;
+    width: 618px;
+    height: 310px;
+    margin: 10px;
+    justify-content: flex-end;
+}
+.why_are_we_box_l .why_are_we_text {
+    width: 50%;
+    margin: 25px;
+}
+
+.why_are_we_box_l h5 {
+    font-size: 24px;
+    width: 250px;
+    margin-bottom: 20px;
+}
+.why_are_we_box_l p{
+    font-size: 16px;
+    white-space: normal;
+    width: 300px;
+    font-family: HelveticaRegular, Helvetica, Arial, sans-serif;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* tabs */
 .tb_button
