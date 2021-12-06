@@ -157,7 +157,6 @@ all_but.forEach(function(item, i) {
 
         item.addEventListener('click', function(e) {
           removeClassList(all_but, all_cnt)
-          this.style.color="red"
           this.classList.add('tbb_act');
           all_cnt[i].classList.add('tbc_act');          
      }, false);
@@ -166,7 +165,6 @@ all_but.forEach(function(item, i) {
 function removeClassList(but, cnt){
   but.forEach(function(item) {
     item.classList.remove('tbb_act')
-    item.style.color="black"
   })
   cnt.forEach(function(item) {
     item.classList.remove('tbc_act')

@@ -180,26 +180,40 @@ echo '<div class="partition_tabs">
 echo '</div>';
 
 
-   ?>
-   
+
+$tabs = carbon_get_post_meta( $post->ID, 'views' );
+$tbb_act='tbb_act';
+echo '
 <div class="tbs">
-<div class="tb_button">
-  <a class="tb_but tbb_act" href="#content-1">Вкладка 1</a>
-  <a class="tb_but" href="#content-2">Вкладка 2</a>
-  <a class="tb_but" href="#content-3">Вкладка 3</a>
-</div>
-<div class="tb_content">
-  <div class="tb_cnt tbc_act" id="content-1">
-    Содержимое 1...
-  </div>
-  <div class="tb_cnt" id="content-2">
-    Содержимое 2...
-  </div>
-  <div class="tb_cnt" id="content-3">
-    Содержимое 3...
-  </div>
-</div>
-</div>
+<ul class="tb_button">';
+
+foreach ( $tabs as $item ): 
+        
+ echo ' 
+  <li class="tb_but '.$tbb_act.'"> '.$item['view_title'].' </li>';
+
+    if($tbb_act){$tbb_act='';}
+
+endforeach;
+echo ' </ul>';
+
+$tbc_act='tbc_act';
+echo ' <ul class="tb_content">';
+foreach ( $tabs as  $item ): 
+
+echo ' 
+  <li class="tb_cnt '.$tbc_act.'" ">
+  <div class="tb_cnt_image">'
+  . wp_get_attachment_image($item['view_icon'], 'post-thumbnail', '', array( 'alt' => $item['view_alt'],))
+  . '</div>
+  <div class="tb_cnt_text">'.$item['view_description'].'</div>
+  </li>';
+  if($tbc_act){$tbc_act='';}
+endforeach;
+echo '</ul>
+</div>';
+
+ ?>
 </div>
 
 </main>
