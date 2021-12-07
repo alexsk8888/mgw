@@ -55,3 +55,21 @@ Container::make("post_meta", "Первичная уборка")
             ) )
     ) );
 //\tabs    
+
+// tabs
+Container::make("post_meta", "О компании")
+// ->set_context('side')
+->set_priority("high")
+->show_on_template("templates/front-page.php")
+// video box
+->add_fields( array(
+    Field::make( 'image', '1view_icon', __( ' Изображение' ) )->set_width( 10 ),
+    Field::make( 'textarea', '2view_alt', __( ' "Alt" Фонового изображения' ))->set_width( 15 ),
+    Field::make( 'rich_text', 'v1_description', __( ' Описание' ))->set_width( 70 ),
+    Field::make( 'rich_text', 'v2_description', __( ' Описание' )),
+    Field::make( 'rich_text', 'v3_description', __( ' Описание' )),
+    Field::make( 'rich_text', 'v4_description', __( ' Миссия компании:' )),
+    Field::make( 'rich_text', 'v5_description', __( ' текст после слайдера' )),
+
+    ) );
+
