@@ -328,6 +328,13 @@
     align-items: center;
     justify-content: center;
 }
+.family {
+
+    width: 1423px;
+    padding: 30px;
+    margin: 20px auto;
+
+}
 .direction h4 {
     color: #4b95dd !important;
     text-transform: uppercase;

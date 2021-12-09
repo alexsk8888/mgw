@@ -228,7 +228,7 @@ font-family: HelveticaMedium;
 font-size: 16px;
 }
 #footer-product li:first-of-type:before{
-content: 'Â» ';
+content: '';
 font-size: 18px;
 display: inline-block;
 margin-right: 5px;
@@ -239,7 +239,7 @@ padding: 10px;
 padding-top: 0;
 }
 .bro-footer .bro-col:nth-child(2) li:before {
-content: 'Â» ';
+content: '';
 font-size: 18px;
 display: inline-block;
 margin-right: 5px;
