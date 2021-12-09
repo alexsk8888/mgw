@@ -43,3 +43,7 @@ function so_style_pages() {
     wp_enqueue_script( 'themename', get_stylesheet_directory_uri() . '/assets/js/app.js', array('jquery'), null, true );
 }
 	add_action( 'wp_enqueue_scripts', 'so_style_pages' );
+
+		
+
+

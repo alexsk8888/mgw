@@ -201,9 +201,9 @@ echo ' <ul class="tb_content">';
 foreach ( $tabs as  $item ): 
 
 echo ' 
-  <li class="tb_cnt '.$tbc_act.'" ">
+  <li class="tb_cnt '.$tbc_act.' ">
   <div class="tb_cnt_image">'
-  . wp_get_attachment_image($item['view_icon'], 'post-thumbnail', '', array( 'alt' => $item['view_alt'],))
+  . wp_get_attachment_image($item['view_icon'], 'post-thumbnail', '', array( 'alt' => $item['view_alt']))
   . '</div>
   <div class="tb_cnt_text">'.$item['view_description'].'</div>
   </li>';
@@ -214,6 +214,71 @@ echo '</ul>
 
 </div></div>';
 }
+$slides = carbon_get_theme_option( 'about_slider' );
+echo
+'<div class="about">
+<h3 class="about_h2">' . blue_title('О компании') . '</h3>
+    <div class="about_box">
+    <div class="about_image">' 
+    . wp_get_attachment_image(carbon_get_post_meta($post->ID, 'about_icon'), 'post-thumbnail', '', array( 'alt' => carbon_get_post_meta($post->ID, 'about_alt'))) . '</div>
+    <div class="about_text">'.carbon_get_post_meta($post->ID, 'about_text').'</div>
+    </div>
+    <div class="direction">'.carbon_get_post_meta($post->ID, 'about_direction').'</div>
+    <div class="family">'.carbon_get_post_meta($post->ID, 'about_family').'</div>
+    
+
+    <div class="mission">
+        <div class="mission_text">'. carbon_get_post_meta(get_the_ID(), 'about_mission') .'</div>';
+       $about_slider = carbon_get_post_meta( $post->ID, 'about_slider' );
+         echo '
+         <div class="about_slider">
+            <div class="owl-carousel slide-two">';
+                foreach ( $about_slider as  $item ): 
+                echo
+                '<div class="about_item">'
+                . wp_get_attachment_image($item['image'], 'thumbnail', '', array( 'alt' => $item['alt'])). '
+                </div>';
+                endforeach;
+                echo '
+            </div>
+                <div v class="about_nav">
+                </div> 
+         </div>
+    </div></div>';
+    
+    $sert = carbon_get_post_meta( $post->ID, 'sert' );
+if(!empty($sert)){
+
+    echo ' <div class="sertification">
+    <h3 class="about_h2">' . blue_title('Сертификаты') . '</h3><div class="images-boxes">';
+$sert_counter=0;
+foreach ( $sert as $item ): 
+
+    echo'
+    <div id="images-box">'
+  
+     . wp_get_attachment_image($item['image'], 'thumbnail', '', array( 'alt' => $item['alt']))
+                . ' 
+
+    </div>';
+
+
+endforeach;
+}
+
+echo'
+    </div</div>
+
+    <div class="counter">
+        <h3></h3>
+        <p></p>
+        <div class="count"></div>
+        <count_form></count_form>
+    </div>
+
+    <div class="feedb">
+    </div>'
+
  ?>
 </div>
 

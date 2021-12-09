@@ -20,7 +20,7 @@ Container::make( 'theme_options', __( 'Сдайдер банера' ) )
 
 Container::make("post_meta", "Наши преимущества")
     // ->set_context('side')
-    ->set_priority("high")
+     
     ->show_on_template("templates/front-page.php")
     // video box
     ->add_fields( array(
@@ -37,7 +37,7 @@ Container::make("post_meta", "Наши преимущества")
     ) );
 Container::make("post_meta", "Наши заказчики и партнеры")
     // ->set_context('side')
-    ->set_priority("high")
+     
     ->show_on_template("templates/front-page.php")
     // video box
     ->add_fields( array(
@@ -54,7 +54,7 @@ Container::make("post_meta", "Наши заказчики и партнеры")
 
 Container::make("post_meta", "Виды офисных перегородок")
     // ->set_context('side')
-    ->set_priority("high")
+     
     ->show_on_template("templates/front-page.php")
     // video box
     ->add_fields( array(
@@ -73,7 +73,7 @@ Container::make("post_meta", "Виды офисных перегородок")
     ) );
 
 Container::make( 'post_meta', __( 'Single project' ) )
-    ->set_priority("high")
+     
     ->show_on_template("templates/front-page.php")
     ->add_fields( array(
         Field::make( 'complex', 'slider_projects', 'Слайдер, максимум 35 изображений' )->set_layout( 'tabbed-vertical' )->set_max( 35 )
@@ -91,7 +91,7 @@ Container::make( 'post_meta', __( 'Single project' ) )
     ));
 
 Container::make( 'post_meta', __( 'Выполненные проекты - Главное фото' ) )
-    ->set_priority("high")
+     
     ->show_on_template("templates/front-page.php")
     ->add_fields( array(
 
@@ -106,14 +106,14 @@ Container::make( 'post_meta', __( 'Выполненные проекты - Гл�
 //----------  Продукция --------------
 
 Container::make("post_meta", "Продукция")
-    ->set_priority("high")
+     
     ->show_on_template("templates/products_page.php")
     ->add_fields( array(
         Field::make( 'text', 'products_title', __( ' Заголовок блока' )),
     ) );
 
 Container::make( 'post_meta', __( 'Блок продукта' ) )
-    ->set_priority("high")
+     
     ->show_on_template("templates/products_page.php")
     ->add_fields( array(
         Field::make( 'complex', 'single_product', 'Максимум 15 блоков' )->set_layout( 'tabbed-vertical' )->set_max( 15 )
@@ -133,3 +133,87 @@ Container::make( 'post_meta', __( 'Блок продукта' ) )
 
             ))
     ));
+
+    Container::make("post_meta", "Первичная уборка")
+
+     
+    ->show_on_template("templates/front-page.php")
+ 
+    ->add_fields( array(
+        Field::make( 'image', 'first_clean_background', __( ' Фоновое изображение' ) )->set_width( 50 ),
+        Field::make( 'rich_text', 'first_clean_text', __( ' Текст' ))->set_width( 50 )
+       
+    ) );
+
+Container::make("post_meta", "Почему стоит обратиться к нам")
+
+     
+    ->show_on_template("templates/front-page.php")
+    
+    ->add_fields( array(     
+        Field::make( 'image', 'why_are_we_background_container', __( ' Фоновое изображение' ) ),
+        Field::make( 'complex', 'why_are_we', 'Блок "плитка"  максимум 20шт' )->set_layout( 'tabbed-horizontal' )->set_max( 20 )
+        ->add_fields( array( 
+              Field::make( 'rich_text', 'why_are_we_text', __( ' Текст' ))->set_width( 50 ),
+              Field::make( "checkbox", "why_color", "Белый цвет текста" )->set_width( 10 ),
+              Field::make( 'image', 'why_are_we_background', __( ' Фоновое изображение' ) )->set_width( 10 ),
+             
+				 
+
+        ) )       
+    ) );
+
+// tabs
+    Container::make("post_meta", "Виды профилей")
+    // ->set_context('side')
+     
+    ->show_on_template("templates/front-page.php")
+    // video box
+    ->add_fields( array(
+        Field::make( 'complex', 'views', 'кнопка  максимум 10шт' )->set_layout( 'tabbed-horizontal' )->set_max( 10 )
+            ->add_fields( array(
+                Field::make( 'textarea', 'view_title', __( ' Заголовок кнопки' ))
+                ->set_width( 15 )
+                ->set_required(true),
+                Field::make( 'image', 'view_icon', __( ' Изображение' ) )
+                ->set_width( 10 ),
+                Field::make( 'textarea', 'view_alt', __( ' "Alt" Фонового изображения' ))
+                ->set_width( 15 ),
+                Field::make( 'rich_text', 'view_description', __( ' Описание' ))
+                ->set_width( 60 )
+                ->set_required(true),
+            ) )
+    ) );
+//\tabs    
+
+Container::make("post_meta", "О компании")
+ 
+->show_on_template("templates/front-page.php")
+->add_fields( array(
+    Field::make( 'image', 'about_icon', __( ' Изображение' ) )->set_width( 10 ),
+    Field::make( 'textarea', 'about_alt', __( ' "Alt"   изображения' ))->set_width( 15 ),
+    Field::make( 'rich_text', 'about_text', __( ' Описание картинки' ))->set_width( 70 ),
+    Field::make( 'rich_text', 'about_direction', __( ' текст наши направления' )),
+    Field::make( 'rich_text', 'about_family', __( ' «МЕГАВОЛ» – это одна большая семья' )),
+    Field::make( 'rich_text', 'about_mission', __( ' Миссия компании:' )) ->set_width( 40 ),
+    Field::make( 'complex', 'about_slider', 'Блок "Слайдер"  максимум 20шт' )->set_layout( 'tabbed-horizontal' )->set_max( 20 )->set_width( 50 )
+    ->add_fields( array(
+        Field::make( 'image', 'image', __( ' изображение' ))->set_width( 10 ),
+        Field::make( 'textarea', 'alt', __( ' "Alt" иконки' ))->set_width( 10 ))),
+    Field::make( 'rich_text', 'about', __( ' текст после слайдера' )),
+
+    ) );
+
+Container::make("post_meta", "Сертификаты")
+ 
+->show_on_template("templates/front-page.php")
+->add_fields( array(
+
+    Field::make( 'complex', 'sert', 'Блок "плитка"  максимум 20шт' )->set_layout( 'tabbed-horizontal' )->set_max( 20 )
+    ->add_fields( array(
+        Field::make( 'image', 'image', __( ' изображение' ))->set_width( 10 ),
+        Field::make( 'textarea', 'alt', __( ' "Alt" иконки' ))->set_width( 10 ))),
+    
+
+    ) );
+

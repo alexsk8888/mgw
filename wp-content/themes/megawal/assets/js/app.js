@@ -63,6 +63,24 @@ $(document).ready(function(){
     });
   });
 
+  $(".slide-two").owlCarousel({
+    items:3,
+    margin:10,
+    dots: true,
+    mouseDrag: true,
+    touchDrag: true,
+    nav: true,
+    autoWidth: true,
+    lazyLoad: true,
+    navContainer: ".navBtnCarousel",
+    dotsContainer: ".owlDotsBlock",
+    rewind: true,
+    autoplay: true,
+    loop:"true",
+    navContainer: ".about_nav",
+
+});
+
 // ------------------виды офисных прегородок-------------------
 
 
@@ -133,7 +151,7 @@ var $tabs = function (target) {
         all_cnt= Array.from(document.querySelectorAll('.tb_cnt'));
 
 all_but.forEach(function(item, i) {
-  console.log("element" + item + " number " + i);  
+  // console.log("element" + item + " number " + i);  
 
         item.addEventListener('click', function(e) {
           removeClassList(all_but, all_cnt)
@@ -150,3 +168,4 @@ function removeClassList(but, cnt){
     item.classList.remove('tbc_act')
   })
 }
+
