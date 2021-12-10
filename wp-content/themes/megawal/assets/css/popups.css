@@ -1,0 +1,60 @@
+.images-boxes{
+    display: flex;
+     margin: 0;
+    padding: 0;
+}
+.images_bcgr {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    background: #000000b3;
+    z-index:0;
+}
+.images_bcgr_active{
+    display: block;
+   margin: 0;
+    padding: 0;
+    z-index: 99;
+}
+.images-box{
+
+}
+.images-box_active {
+    width: fit-content;
+    height: fit-content;
+    position: fixed;
+    top: 5vh;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.close_sert {
+    background-color: transparent;
+    background-image: url(../image/close.png);
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    display: none;
+    z-index: 10000;
+    position: relative;
+    top: 45px;
+    margin-right: 36px;
+}
+.close_sert_active{
+    display: block;
+}
+.one_sert{
+    margin: 0;
+    padding: 0;   
+     }
+
+.full_size_sert {
+    height: 80vh !important;
+    width: 100% !important;
+    object-fit: contain;
+}

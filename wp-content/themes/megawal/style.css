@@ -214,7 +214,7 @@ width: 240px;
 }
 
 .bro-footer #footer-product li:before {
-content: 'â€¢ ';
+content: '';
 display: inline-block;
 font-size: 14px;
 margin-right: 5px;

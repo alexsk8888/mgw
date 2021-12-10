@@ -250,15 +250,16 @@ echo
 if(!empty($sert)){
 
     echo ' <div class="sertification">
-    <h3 class="about_h2">' . blue_title('Сертификаты') . '</h3><div class="images-boxes">';
+    <h3 class="about_h2">' . blue_title('Сертификаты') . '</h3>
+    <div class="images-boxes">';
 $sert_counter=0;
 foreach ( $sert as $item ): 
 
     echo'
-    <div id="images-box">'
+    <div class="images-box">
+    <div class="close_sert"></div>'
   
-     . wp_get_attachment_image($item['image'], 'thumbnail', '', array( 'alt' => $item['alt']))
-                . ' 
+     . wp_get_attachment_image($item['image'], 'post-thumbnail', '', array( 'class' => 'one_sert', 'alt' => $item['alt'])). ' 
 
     </div>';
 
@@ -267,7 +268,8 @@ endforeach;
 }
 
 echo'
-    </div</div>
+    
+    <div class="images_bcgr"></div></div></div>
 
     <div class="counter">
         <h3></h3>
