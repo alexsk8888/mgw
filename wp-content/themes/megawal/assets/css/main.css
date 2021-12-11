@@ -1,4 +1,11 @@
-
+.wpcf7 form .wpcf7-response-output {
+    margin: 2em 0.5em 1em;
+    padding: 0.2em 1em;
+    border: dashed 4px;
+    border-top: transparent;
+    color: white;
+    font-weight: 600;
+}
 #primary *{
     box-sizing: border-box;
     /* font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -398,4 +405,73 @@
     background-size: cover;
     height: 610px;
     overflow: hidden;
+}
+.sale_box {
+    display: flex;
+    width: 820px;
+    height: 448px;
+    background: #67376c;
+    padding: 30px 0 0 0;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+.counter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.count_title {
+    color: #fdbf2d;
+    font-size: 45px;
+    font-weight: 600;
+}
+.count_text{
+    color: #fff !important;
+    margin-top: 20px;
+    font-size: 20px !important;
+}
+.count_text p{
+    text-align: center;
+}
+.counter_digital {
+    width: 285px !important;
+    background: #ffffff80;
+    box-shadow: 0 0 19px 5px white;
+}
+.count_timer_text{
+    width: 285px !important;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 17px;
+}
+.count_timer_text p{
+    text-align: end;
+}
+.count {
+    display: flex;
+    align-items: center;
+    width: 590px;
+    justify-content: space-between;
+}
+
+.form_col {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+.form_col input{
+ width: 285px !important;
+ margin: 0 10px;
+
+}
+.form_col .submit{
+  border-radius: 50px;
+  color: white;
+  text-shadow: 0px 0px 13px black;
+}
+.wpcf7-spinner {
+  position: absolute !important;
 }

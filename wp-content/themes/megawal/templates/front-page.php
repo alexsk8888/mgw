@@ -280,15 +280,21 @@ echo'
     <div class="counter" style="background-image: url(' .
     wp_get_attachment_image_url( carbon_get_post_meta( $post->ID, 'count_image' ), 'full' ) .
      ')">
-        <h3>'.carbon_get_post_meta( $post->ID, 'count_title' ).'</h3>
-        <p>'.carbon_get_post_meta( $post->ID, 'count_text' ).'</p>
-        <div class="count">
-        <p>'.carbon_get_post_meta( $post->ID, 'count_timer_text' ).'</p>
-        ';
-         echo do_shortcode('[ycd_countdown id=687]');
-echo '
+     <div class="sale_box">
+        <h3 class="count_title">'.carbon_get_post_meta( $post->ID, 'count_title' ).'</h3>
+        <div class="count_text">'.wpautop( carbon_get_post_meta( $post->ID, 'count_text' )).'</div>
+                <div class="count">
+        <div class="count_timer_text">'.wpautop(carbon_get_post_meta( $post->ID, 'count_timer_text' )).'</div>
+        <div class ="counter_digital">
+        '. 
+        do_shortcode('[ycd_countdown id=646]').
+         '
+         </div></div>
+        <div class="count_form">  '. 
+        do_shortcode('[contact-form-7 id="647" title="sale"]').
+         '        
         </div>
-        <count_form></count_form>
+    </div>
     </div>
 
     <div class="feedb">

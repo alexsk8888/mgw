@@ -223,7 +223,7 @@ Container::make("post_meta", "Сертификаты")
     ->show_on_template("templates/front-page.php")
     ->add_fields( array(
         Field::make( 'image', 'count_image', __( ' Фоновое изображение' ) )->set_width( 10 ),
-        Field::make( 'textarea', 'count_title', __( ' Заголовок блока' ))->set_width( 15 ),
-        Field::make( 'rich_text', 'count_text', __( ' Подзаголовок' ))->set_width( 70 ),
-        Field::make( 'textarea', 'count_timer_text', __( ' Спешите до конца осталось' ))->set_width( 15 ),
+        Field::make( 'textarea', 'count_title', __( ' Заголовок блока' ))->set_width( 15 )->set_rows(4),
+        Field::make( 'textarea', 'count_text', __( ' Подзаголовок' ))->set_width( 50 )->set_rows(4),
+        Field::make( 'textarea', 'count_timer_text', __( ' Спешите до конца осталось' ))->set_width( 20 )->set_rows(4),
         ) );
