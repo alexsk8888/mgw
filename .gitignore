@@ -4,7 +4,7 @@ node_modules/
 package-lock.json
 
 wp-config.php
-.htaccess
+
 error_log
 /.vscode
 # Created by https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode

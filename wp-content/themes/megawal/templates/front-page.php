@@ -140,8 +140,8 @@ echo '<div class="partition_tabs">
                 </div>
                     <div class="right_block_buttons">
                         <div class="types-content-item__controls office_buttons"> 
-                            <a href="/wp-content/themes/megawal/popups/modal-zamer.html" class="btn btn-sm btn-yellow btn--icon-ruler topopup fancybox.ajax">Вызвать замерщика </a> 
-                            <a href="/wp-content/themes/megawal/popups/modal-price.html" class="btn btn-sm btn-yellow btn--icon-check topopup fancybox.ajax">Рассчитать стоимость</a>
+                            <a href="" class="btn btn-sm btn-yellow btn--icon-ruler topopup fancybox.ajax">Вызвать замерщика </a> 
+                            <a href="" class="btn btn-sm btn-yellow btn--icon-check topopup fancybox.ajax">Рассчитать стоимость</a>
                         </div>
                     </div>       
        </div>';
@@ -151,7 +151,7 @@ echo '<div class="partition_tabs">
  echo '<div class="first_clean" style="background-image: url(' .
  wp_get_attachment_image_url( $first_clean_background, 'full' ) .
   ')"><div class="clean_text">'. carbon_get_post_meta(get_the_ID(), 'first_clean_text') .'
- <a href="/wp-content/themes/megawal/popups/modal-price.html" class="btn btn-sm btn-yellow btn--icon-check topopup fancybox.ajax"> Узнать подробности и сделать заказ </a>
+ <a href="" class="btn btn-sm btn-yellow btn--icon-check topopup fancybox.ajax"> Узнать подробности и сделать заказ </a>
  </div>
  </div>';
  }
@@ -277,11 +277,15 @@ echo'
     
     <div class="images_bcgr"></div></div></div>
 
-    <div class="counter">
-        <h3></h3>
-        <p></p>
-        <div class="count">';
-         echo do_shortcode('[ycd_countdown id=646]');
+    <div class="counter" style="background-image: url(' .
+    wp_get_attachment_image_url( carbon_get_post_meta( $post->ID, 'count_image' ), 'full' ) .
+     ')">
+        <h3>'.carbon_get_post_meta( $post->ID, 'count_title' ).'</h3>
+        <p>'.carbon_get_post_meta( $post->ID, 'count_text' ).'</p>
+        <div class="count">
+        <p>'.carbon_get_post_meta( $post->ID, 'count_timer_text' ).'</p>
+        ';
+         echo do_shortcode('[ycd_countdown id=687]');
 echo '
         </div>
         <count_form></count_form>

@@ -392,3 +392,10 @@
     display: flex;
     justify-content: center;
 }
+
+.counter {
+    background: url(../img/bg-discount.jpg) 50% no-repeat #e5f6fd;
+    background-size: cover;
+    height: 610px;
+    overflow: hidden;
+}
