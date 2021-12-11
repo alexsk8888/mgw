@@ -2,7 +2,7 @@
 Stable tag: trunk
 Contributors: Tkama
 Requires at least: 2.7
-Tested up to: 4.7.2
+Tested up to: 5.8.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: spam, spammer, autospam, spamblock, antispam, anti-spam, protect, comments, ping, trackback, bot, robot, human, captcha, invisible
@@ -38,6 +38,10 @@ NO! Plugin invisible for users. You need to go to WordPress "Discussion" setting
 
 
 == Changelog ==
+
+= 1.8.1 =
+* Code refactoring.
+* `kama_spamblock__process_comment_types` hook added.
 
 = 1.8 =
 * FIX: WordPress 5.5 support.

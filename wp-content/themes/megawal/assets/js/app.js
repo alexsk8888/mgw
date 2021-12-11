@@ -173,6 +173,7 @@ function removeClassList(but, cnt){
 let one_sert =  Array.from(document.querySelectorAll('.one_sert')),
     close_sert= Array.from(document.querySelectorAll('.close_sert')),
     images_box= Array.from(document.querySelectorAll('.images-box')),
+    zoom= Array.from(document.querySelectorAll('.zoom')),
     images_bcgr = document.querySelector('.images_bcgr');
 
     one_sert.forEach(function(item, i) {
@@ -181,7 +182,19 @@ let one_sert =  Array.from(document.querySelectorAll('.one_sert')),
               this.classList.add('full_size_sert');
               images_bcgr.classList.add('images_bcgr_active')       
               images_box[i].classList.add('images-box_active')       
-              close_sert[i].classList.add('close_sert_active')       
+              close_sert[i].classList.add('close_sert_active')
+              zoom[i].style.display = 'none'       
+         }, false);
+
+    });
+    zoom.forEach(function(item, i) {
+    
+            item.addEventListener('click', function(e) {
+              one_sert[i].classList.add('full_size_sert')
+              images_bcgr.classList.add('images_bcgr_active')       
+              images_box[i].classList.add('images-box_active')       
+              close_sert[i].classList.add('close_sert_active')  
+              zoom[i].style.display = 'none'      
          }, false);
 
     });
@@ -191,7 +204,8 @@ let one_sert =  Array.from(document.querySelectorAll('.one_sert')),
             images_box[i].classList.remove('images-box_active')       
             one_sert[i].classList.remove('full_size_sert')
             images_bcgr.classList.remove('images_bcgr_active')
-            close_sert[i].classList.remove('close_sert_active')     
+            close_sert[i].classList.remove('close_sert_active')
+            zoom[i].style.display = 'block'      
          }, false);
 
     });
@@ -201,5 +215,41 @@ let one_sert =  Array.from(document.querySelectorAll('.one_sert')),
         one_sert[i].classList.remove('full_size_sert')
         images_bcgr.classList.remove('images_bcgr_active')
         close_sert[i].classList.remove('close_sert_active')  
+        zoom[i].style.display = 'block' 
       },)
+    });
+// --------------------------------
+
+let thank_blank =  Array.from(document.querySelectorAll('.thank_blank')),
+    close_thank_blank = document.querySelector('.close_thank_blank'),
+    thank_blank_bcgr = document.querySelector('.thank_blank_bcgr');
+    thank_blank_full = document.querySelector('.thank_blank_full');
+    thank_blank.forEach(function(item, i) {
+    
+            item.addEventListener('click', function(e) {
+              thank_blank_full.src = this.src
+              thank_blank_bcgr.classList.add('thank_blank_bcgr_active')
+
+              close_thank_blank.classList.add('close_sert_active')
+                   
+         }, false);
+
+    });
+
+     console.log(" click closer")
+     thank_blank_bcgr.addEventListener('click', function(e) {
+              thank_blank_bcgr.classList.remove('thank_blank_bcgr_active')
+        close_thank_blank.classList.remove('close_sert_active')  
+            
+               
+         }, false);
+
+    
+    thank_blank_bcgr.addEventListener('click', function(e) {
+      
+      console.log(" click thank_blank_bcgr")
+        thank_blank_bcgr.classList.remove('thank_blank_bcgr_active')
+        close_thank_blank.classList.remove('close_sert_active')  
+        
+      
     });

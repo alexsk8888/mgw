@@ -235,13 +235,19 @@ echo
             <div class="owl-carousel slide-two">';
                 foreach ( $about_slider as  $item ): 
                 echo
-                '<div class="about_item">'
-                . wp_get_attachment_image($item['image'], 'thumbnail', '', array( 'alt' => $item['alt'])). '
+                '<div class="about_item">
+                '
+                . wp_get_attachment_image($item['image'], 'thumbnail', '', array( 'alt' => $item['alt'], 'class' => 'thank_blank')). '
                 </div>';
                 endforeach;
                 echo '
             </div>
-                <div v class="about_nav">
+            <div class="thank_blank_bcgr">
+            <div class="than_blank_box">
+            <div class="close_thank_blank"></div>
+            <img src="" class="thank_blank_full">
+            </div></div>
+                <div class="about_nav">
                 </div> 
          </div>
     </div></div>';
@@ -260,7 +266,7 @@ foreach ( $sert as $item ):
     <div class="close_sert"></div>'
   
      . wp_get_attachment_image($item['image'], 'post-thumbnail', '', array( 'class' => 'one_sert', 'alt' => $item['alt'])). ' 
-
+<div class="zoom">Увеличить</div>
     </div>';
 
 
@@ -274,7 +280,10 @@ echo'
     <div class="counter">
         <h3></h3>
         <p></p>
-        <div class="count"></div>
+        <div class="count">';
+         echo do_shortcode('[ycd_countdown id=646]');
+echo '
+        </div>
         <count_form></count_form>
     </div>
 
@@ -283,7 +292,7 @@ echo'
 
  ?>
 </div>
-
+<img src="" alt="" srcset="">
 </main>
  <?php
  get_sidebar();

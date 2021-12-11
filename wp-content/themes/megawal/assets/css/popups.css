@@ -1,60 +1,116 @@
-.images-boxes{
+.one_sert {
+    cursor: pointer;
+  }
+  .full_size_sert {
+    cursor: default;
+  }
+  .images-boxes {
     display: flex;
-     margin: 0;
+    margin: 0;
     padding: 0;
-}
-.images_bcgr {
+  }
+  .images_bcgr, .thank_blank_bcgr {
     display: none;
     width: 100vw;
     height: 100vh;
     padding: 0;
     position: fixed;
     top: 0;
+    left: 0;
     background: #000000b3;
-    z-index:0;
-}
-.images_bcgr_active{
+    z-index: 0;
+  }
+  .images_bcgr_active, .thank_blank_bcgr_active {
     display: block;
-   margin: 0;
+    margin: 0;
     padding: 0;
     z-index: 99;
-}
-.images-box{
-
-}
-.images-box_active {
+  }
+  .images-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .images-box_active {
     width: fit-content;
-    height: fit-content;
+    height: 100vh;
     position: fixed;
-    top: 5vh;
+    top: 0;
     z-index: 1000;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-}
-.close_sert {
+    justify-content: center;
+  }
+  .close_sert {
     background-color: transparent;
-    background-image: url(../image/close.png);
-    background-size: cover;
-    width: 25px;
-    height: 25px;
+    background-image: url(../image/fancybox_sprite.png);
+    background-position: -42px 0 !important;
     cursor: pointer;
     display: none;
     z-index: 10000;
     position: relative;
-    top: 45px;
-    margin-right: 36px;
+    top: 36px;
+    margin-right: 15px;
+    width: 36px;
+    height: 36px;
 }
-.close_sert_active{
+.close_thank_blank {
+    background-color: transparent;
+    background-image: url(../image/fancybox_sprite.png);
+    background-position: -42px 0 !important;
+    cursor: pointer;
+    display: none;
+    z-index: 10000;
+    position: relative;
+    top: 19px;
+    margin-right: -14px;
+    width: 36px;
+    height: 36px;
+}
+  .close_sert_active, .close_sert_active {
     display: block;
-}
-.one_sert{
+  }
+  .one_sert {
     margin: 0;
-    padding: 0;   
-     }
-
-.full_size_sert {
+    padding: 0;
+  }
+  
+  .zoom {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    color: #67376c;
+    font-size: 14px;
+    font-weight: 300;
+    width: fit-content;
+  }
+  .zoom:before {
+    content: " ";
+    width: 24px;
+    height: 24px;
+    background: url(../image/ico-zoom2.png) no-repeat;
+    position: absolute;
+    bottom: -4px;
+    left: -29px;
+  }
+  .full_size_sert {
     height: 80vh !important;
     width: 100% !important;
     object-fit: contain;
-}
+  }
+  
+  .thank_blank_full{
+          height: 80vh !important;
+      width: 100% !important;
+      object-fit: contain;
+  }
+  .than_blank_box {
+      margin: auto;
+      width: fit-content;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+    }
