@@ -436,8 +436,8 @@
 }
 .counter_digital {
     width: 285px !important;
-    background: #ffffff80;
-    box-shadow: 0 0 19px 5px white;
+    /* background: #ffffff80; */
+    /* box-shadow: 0 0 19px 5px white; */
 }
 .count_timer_text{
     width: 285px !important;
@@ -474,4 +474,72 @@
 }
 .wpcf7-spinner {
   position: absolute !important;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,cyrillic);
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  margin:0;
+  padding:0;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+/* demo контейнер */
+.demo {
+    max-width: 1024px;
+    padding: 0 20px;
+    margin: 5% 10%;
+}
+/* скрываем чекбоксы и блоки с содержанием */
+.hide,
+.hide + label ~ div {
+    display: block ;
+    height: 0px;
+    overflow: hidden;
+}
+/* вид текста label */
+.hide + label, .close_seo_text {
+    margin: 0;
+    padding: 0;
+    color: green;
+    cursor: pointer;
+    display: inline-block;
+}
+.hide + div > label {
+display: none;
+}
+/* вид текста label при активном переключателе */
+.hide:checked + label {
+display: none;
+}
+.hide:checked + div > label {
+display: block;
+}
+/* когда чекбокс активен показываем блоки с содержанием  */
+.hide:checked + label + div {
+    height: fit-content; 
+     -webkit-animation:fade ease-in 0.5s; 
+     -moz-animation:fade ease-in 0.5s;
+     animation:fade ease-in 0.5s; 
+}
+/* анимация при появлении скрытых блоков */
+@-moz-keyframes fade {
+    from { opacity: 0; }
+to { opacity: 1 }
+}
+@-webkit-keyframes fade {
+    from { opacity: 0; }
+to { opacity: 1 }
+}
+@keyframes fade {
+    from { opacity: 0; }
+to { opacity: 1 }   
 }

@@ -227,3 +227,13 @@ Container::make("post_meta", "Сертификаты")
         Field::make( 'textarea', 'count_text', __( ' Подзаголовок' ))->set_width( 50 )->set_rows(4),
         Field::make( 'textarea', 'count_timer_text', __( ' Спешите до конца осталось' ))->set_width( 20 )->set_rows(4),
         ) );
+
+
+    Container::make("post_meta", "Seo-шный текст")
+ 
+    ->show_on_template("templates/front-page.php")
+    ->add_fields( array(
+
+        Field::make( 'textarea', 'seo_small_text', __( ' Текст который видно' ))->set_width( 50 )->set_rows(10),
+        Field::make( 'rich_text', 'seo_full_text', __( ' Скрывающийся текст' ))->set_width( 50 )->set_rows(8),
+        ) );
