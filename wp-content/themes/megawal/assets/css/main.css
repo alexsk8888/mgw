@@ -8,10 +8,7 @@
 }
 #primary *{
     box-sizing: border-box;
-    /* font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    color: #000;
-    font-size: 18px;
-    font-weight: 400; */
+
 }
 #primary h3{
     font-family: HelveticaBlack, Helvetica, Arial, sans-serif;
@@ -65,7 +62,7 @@
     background-repeat: no-repeat;
 }
 .clean_text{
-    width: auto !important;
+    /* width: auto !important; */
 }
 .clean_text{
     width: 679px;
@@ -152,12 +149,11 @@
     flex-direction: column;
     align-items: center;
 }
-.tbs{
+.tbs {
     background: white;
     display: flex;
     flex-direction: column;
     margin-bottom: 100px;
-    width: 1230px;
 }
 .tb_button
 {
@@ -206,8 +202,7 @@
 }
 .tb_cnt_image {
     float: left;
-    width: 100%;
-    max-width: 395px;
+    width: 50%;
     padding-top: 10px;
     display: flex;
     align-content: center;
@@ -221,8 +216,7 @@
 }
 .tb_cnt_text {
     float: left;
-    width: 100%;
-    max-width: 657px;
+    width: 50%;
     text-align: left;
     padding: 80px 20px 50px 0;
     font-size: 16px;
@@ -230,7 +224,6 @@
 .tb_cnt h5 {
     font-size: 24px;
     color: #66396b;
-    /* font-family: Helvetica Neue, Helvetica, Arial, sans-serif; */
     font-family: HelveticaBold, Helvetica, Arial, sans-serif;
     margin-bottom: 20px;
 }
@@ -238,26 +231,17 @@
     padding-top: 20px;
     background: #edf0fc;
 }
-.about_box {
-    width: 1423px;
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
-}
+
 
 .about_image{
-    width: 51%;
+margin: 10px;
+width: 50%;
 }
 .about_text{
-    width: 47%;
+margin: 10px;
+width: 50%;
 }
-.about_text  p {
-    color: #000;
-    /* font-family: Helvetica Neue, Helvetica, Arial, sans-serif; */
-    font-family: HelveticaRegular;
-    font-size: 17px;
-    margin-bottom: 20px;
-}
+
 
 
 .mission_text{
@@ -303,46 +287,21 @@
     justify-content: flex-end;
 }
 
-.mission {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: transparent;
-    width: 1423px;
-    padding: 30px;
-    margin: auto;
-}
-.mission_text h4 {
-    text-align: left;
-    color: #000;
-    font-size: 36px;
-    font-family: HelveticaBold, Helvetica, Arial, sans-serif;
-}
-.mission_text h5{
-    color: #4b95dd;
-    text-align: left;
-    font-size: 36px;
-    font-family: HelveticaBold, Helvetica, Arial, sans-serif;
-}
 
-.direction {
+
+
+.direction, .family {
     background: #fff;
     display: flex;
     text-align: center;
-    width: 1423px;
+    /* width: 1423px; */
     padding: 30px;
     margin: 20px auto;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.family {
 
-    width: 1423px;
-    padding: 30px;
-    margin: 20px auto;
-
-}
 .direction h4 {
     color: #4b95dd !important;
     text-transform: uppercase;
@@ -352,7 +311,6 @@
     font-size: 20px;
 }
 .direction ul {
-    /* padding-left: 100px; */
     display: inline-block;
     width: 100%;
     margin-bottom: 20px;
@@ -436,8 +394,8 @@
 }
 .counter_digital {
     width: 285px !important;
-    /* background: #ffffff80; */
-    /* box-shadow: 0 0 19px 5px white; */
+    background: #ffffff80;
+    box-shadow: 0 0 19px 5px white;
 }
 .count_timer_text{
     width: 285px !important;
@@ -492,20 +450,17 @@ body {
   font-weight: 400;
   line-height: 1.5;
 }
-/* demo контейнер */
 .demo {
     max-width: 1024px;
     padding: 0 20px;
     margin: 5% 10%;
 }
-/* скрываем чекбоксы и блоки с содержанием */
 .hide,
 .hide + label ~ div {
     display: block ;
     height: 0px;
     overflow: hidden;
 }
-/* вид текста label */
 .hide + label, .close_seo_text {
     margin: 0;
     padding: 0;
@@ -516,21 +471,19 @@ body {
 .hide + div > label {
 display: none;
 }
-/* вид текста label при активном переключателе */
 .hide:checked + label {
 display: none;
 }
 .hide:checked + div > label {
 display: block;
 }
-/* когда чекбокс активен показываем блоки с содержанием  */
 .hide:checked + label + div {
     height: fit-content; 
      -webkit-animation:fade ease-in 0.5s; 
      -moz-animation:fade ease-in 0.5s;
      animation:fade ease-in 0.5s; 
 }
-/* анимация при появлении скрытых блоков */
+
 @-moz-keyframes fade {
     from { opacity: 0; }
 to { opacity: 1 }
