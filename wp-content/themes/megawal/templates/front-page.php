@@ -320,17 +320,10 @@ echo
 
 </div>
 
-
-
-
-    
-    <div class="feedb">
-    
-    </div>'
-
+    <div class="feedb"></div>'
  ?>
 </div>
-<img src="" alt="" srcset="">
+
 </main>
  <?php
  get_sidebar();
