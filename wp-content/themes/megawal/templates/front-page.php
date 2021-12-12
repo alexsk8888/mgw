@@ -297,12 +297,12 @@ echo'
     </div>
     </div>
 
-
-    
-    
-
     <div class="demo">
-     '.wpautop(carbon_get_post_meta( $post->ID, 'seo_small_text' )).'
+     '.wpautop(carbon_get_post_meta( $post->ID, 'seo_small_text' ));
+     
+       if(carbon_get_post_meta( $post->ID, 'seo_full_text' )){
+echo
+     '
     <input class="hide" id="hd-1" type="checkbox">
     <label for="hd-1">
    Подробнее..
@@ -312,8 +312,9 @@ echo'
     '.wpautop(carbon_get_post_meta( $post->ID, 'seo_full_text' )).'
     
     <label class = "close_seo_text"for="hd-1"> Свернуть</label>
+        
     </div>
-    
+    .';}'.
         <br/>
         <br/>
 
