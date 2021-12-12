@@ -287,8 +287,8 @@ echo'
         <div class="count_timer_text">'.wpautop(carbon_get_post_meta( $post->ID, 'count_timer_text' )).'</div>
         <div class ="counter_digital">
         '. 
-        do_shortcode('[ycd_countdown id=687]').
-        // do_shortcode('[ycd_countdown id=646]').
+        // do_shortcode('[ycd_countdown id=687]').
+        do_shortcode('[ycd_countdown id=646]').
          '
          </div></div>
         <div class="count_form">  '. 

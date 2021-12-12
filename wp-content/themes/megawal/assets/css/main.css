@@ -64,193 +64,22 @@
 .clean_text{
     /* width: auto !important; */
 }
-.clean_text{
-    width: 679px;
-    margin-right: 18vw;
-    padding: 20px;
-    background: #ffffff54;
-    -webkit-box-shadow: 0px 0px 24px 12px rgba(255, 255, 255, 0.2);
-    -moz-box-shadow: 0px 0px 24px 12px rgba(255, 255, 255, 0.2);
-    box-shadow: 0px 0px 24px 12px rgba(255, 255, 255, 0.2);
-}
-.clean_text p{
-    font-family: HelveticaBold, Helvetica, Arial, sans-serif;
-    font-size: 24px;
-    line-height: 1.4;
-    color: white;
-}
 
-.why_are_we{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.why_are_we_box_r {
-    display: flex;
-    width: 618px;
-    height: 310px;
-    margin: 10px;
-    justify-content: flex-start;
-}
-.why_are_we_box_r .why_are_we_text {
-    width: 50%;
-    margin: 25px;
-}
-.why_are_we_box_r h5 {
-    font-weight: 600;
-    color: rgb(0, 0, 0);
-    font-size: 24px;
-    width: 250px;
-    margin-bottom: 20px;
-}
-.why_are_we_box_r p{
-    font-size: 16px;
-    white-space: normal;
-    width: 300px;
-    color: rgb(0, 0, 0);
-    font-family: HelveticaRegular, Helvetica, Arial, sans-serif;
-
-}
-.color_text_white h5, .color_text_white p{
-    color: #fff;
-}
-.why_are_we_box_l {
-    display: flex;
-    width: 618px;
-    height: 310px;
-    margin: 10px;
-    justify-content: flex-end;
-}
-.why_are_we_box_l .why_are_we_text {
-    width: 50%;
-    margin: 25px;
-}
-
-.why_are_we_box_l h5 {
-    font-size: 24px;
-    width: 250px;
-    margin-bottom: 20px;
-    font-weight: 600;
-}
-.why_are_we_box_l p{
-    font-size: 16px;
-    white-space: normal;
-    width: 300px;
-    font-family: HelveticaRegular, Helvetica, Arial, sans-serif;
-
-}
 
 /* tabs */
 
-.tab_box {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-.tbs {
-    background: white;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 100px;
-}
-.tb_button
-{
-    font-size: 0;
-    text-align: center;
-    display: inline-block;
-    position: relative;
-    top: -25px;
-}
-.tb_but{
-    cursor: pointer;
-    display: inline-block;
-    color: #fff;
-    font-size: 17px;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, .75);
-    border-top: 1px solid #914f97;
-    border-left: 1px solid #914f97;
-    font-family: HelveticaLight, Helvetica, Arial, sans-serif;
-    background: -webkit-linear-gradient(top, #914f97, #301a31);
-    background: linear-gradient(180deg, #914f97 0, #301a31);
-    padding: 10px 31px;
-    position: relative;
-}
-.tbb_act{
-    text-decoration: none;
-    color: #fff;
-    background: -webkit-linear-gradient(top, #76cced, #2a66ca);
-    background: linear-gradient(180deg, #76cced 0, #2a66ca);
-}
-.tb_button > .tb_but:first-child {
-    border-radius: 25px 0 0 25px;
-}
-.tb_button > .tb_but:last-child {
-    border-radius: 0 25px 25px 0;
-}
-.tb_cnt {
-    display: none;
-    min-height: 470px;
-}
-.tbc_act {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 100%;
-}
-.tb_cnt_image {
-    float: left;
-    width: 50%;
-    padding-top: 10px;
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-}
-.tb_cnt_image img{
-    width:350px;
-    object-fit: contain;
-   
-}
-.tb_cnt_text {
-    float: left;
-    width: 50%;
-    text-align: left;
-    padding: 80px 20px 50px 0;
-    font-size: 16px;
-}
-.tb_cnt h5 {
-    font-size: 24px;
-    color: #66396b;
-    font-family: HelveticaBold, Helvetica, Arial, sans-serif;
-    margin-bottom: 20px;
-}
 .about {
     padding-top: 20px;
     background: #edf0fc;
 }
 
 
-.about_image{
-margin: 10px;
-width: 50%;
-}
-.about_text{
-margin: 10px;
-width: 50%;
-}
 
 
 
-.mission_text{
-    width: 50%;
-}
-.about_slider{
 
-    width: 590px !important;
-}
+
+
 .about_slider .owl-stage{
     padding-top: 5px;
     height: 260px;
@@ -364,16 +193,7 @@ width: 50%;
     height: 610px;
     overflow: hidden;
 }
-.sale_box {
-    display: flex;
-    width: 820px;
-    height: 448px;
-    background: #67376c;
-    padding: 30px 0 0 0;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-}
+
 .counter{
     display: flex;
     justify-content: center;
@@ -406,20 +226,9 @@ width: 50%;
 .count_timer_text p{
     text-align: end;
 }
-.count {
-    display: flex;
-    align-items: center;
-    width: 590px;
-    justify-content: space-between;
-}
 
-.form_col {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 20px;
-}
+
+
 .form_col input{
  width: 285px !important;
  margin: 0 10px;
