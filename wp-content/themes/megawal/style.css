@@ -647,23 +647,9 @@ border-radius: 50%;
 background-color: #fdd848;
 border: 0;
 }
-.slide img{
-object-fit: cover;
-width: 100vw;
-height: 600px;
-}
 
-#wpcf7-f82-o1{
-  padding-top: 30px;
-  padding-bottom: 55px;
-  border-top: none;
-  height: 600px;
-  border: none;
-  position: relative;
-  z-index: 2;
-  background: #65366a;
-  width: 393px;
-}
+
+
 form .form-heading {
   text-align: center;
   padding-top: 55px;
@@ -676,10 +662,7 @@ form .form-heading p {
   margin-bottom: 20px;
   font-family: HelveticaBold, Helvetica, Arial, sans-serif;
 }
-form .form-content {
-  width: 288px;
-  margin: 0 auto;
-}
+
 .s-first form:after {
   position: absolute;
   top: -115px;
@@ -1182,6 +1165,26 @@ form .form-control {
   top: 10px;
 }
 @media (min-width: 1440px) {
+  form .form-content {
+    width: 288px;
+    margin: 0 auto;
+  }
+  #wpcf7-f82-o1{
+    padding-top: 30px;
+    padding-bottom: 55px;
+    border-top: none;
+    height: 600px;
+    border: none;
+    position: relative;
+    z-index: 2;
+    background: #65366a;
+    width: 393px;
+  }
+  .slide img{
+    object-fit: cover;
+    width: 100vw;
+    height: 600px;
+    }
   .mission {
     display: flex;
     flex-direction: row;
@@ -1217,6 +1220,26 @@ form .form-control {
 }
 }
 @media (min-width: 1024px) and (max-width: 1439px) {  
+  form .form-content {
+    width: 288px;
+    margin: 0 auto;
+  }
+  #wpcf7-f82-o1{
+    padding-top: 30px;
+    padding-bottom: 55px;
+    border-top: none;
+    height: 600px;
+    border: none;
+    position: relative;
+    z-index: 2;
+    background: #65366a;
+    width: 393px;
+  }
+  .slide img{
+    object-fit: cover;
+    width: 100vw;
+    height: 600px;
+    }
   .mission {
     display: flex;
     flex-direction: row;
@@ -1255,6 +1278,60 @@ form .form-control {
 }
 }
 @media (min-width: 768px) and (max-width: 1023px) {  
+  .offer {
+    top: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, .55);
+    padding: 10px 0 10px 10px;
+    width: 380px;
+    height: fit-content;
+    margin-top: 100px;
+}
+.offer h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: left;
+  line-height: 1;
+  color: #fff !important;
+}
+.offer > span {
+  font-size: 20px;
+  line-height: 1.2;
+  font-family: RobotoBold, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  color: #fff !important;
+  margin-top: 20px;
+  display: block;
+  margin-bottom: 20px;
+}
+.offer h3 {
+  font-size: 18px;
+  color: #fed230;
+  float: right;
+  margin: -4px 0 0;
+}
+.slide img {
+  object-fit: cover;
+  width: 100vw;
+  height: 450px;
+}
+form .form-heading {
+  text-align: center;
+  padding-top: 22px;
+  padding-bottom: 25px;
+}
+#wpcf7-f82-o1 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border-top: none;
+  height: 450px;
+  border: none;
+  position: relative;
+  z-index: 2;
+  background: #65366a;
+  width: 393px;
+}
 }
 @media (min-width: 425px) and (max-width: 767px) {  
 }
