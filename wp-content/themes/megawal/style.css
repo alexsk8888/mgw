@@ -3084,7 +3084,7 @@ form .form-heading p {
   z-index: 1;
   background: rgba(0, 0, 0, .55);
   padding: 10px 0 10px 10px;
-  width: 375px;
+  width: 345px;
   height: fit-content;
   margin: 25px auto 0;
 }
@@ -3182,7 +3182,7 @@ padding-bottom: 25px;
   position: relative;
   z-index: 2;
   background: #65366a;
-  width: 375px;
+  width: 345px;
 }
 .AllBuner {
   height: 700px !important;
