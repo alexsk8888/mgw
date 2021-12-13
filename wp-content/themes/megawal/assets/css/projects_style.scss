@@ -244,5 +244,25 @@
   :root{
     --slider_width: 360px;
   }
+  #projects{
+    padding: 0;
+    .projects_info{
+      padding: 0;
+    }
+  }
 
+}
+@media only screen and (max-width: 380px) {
+  :root{
+    --slider_width: 340px;
+  }
+  #projects{
+    .projects_info{
+      #icons_projects{
+        .main_photo_project{
+          padding: 1px;
+        }
+      }
+    }
+  }
 }
