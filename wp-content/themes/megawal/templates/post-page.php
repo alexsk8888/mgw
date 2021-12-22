@@ -1,7 +1,7 @@
 <?php
 
 /*
-Template Name: Post page
+Template Name: single Post page
 */
 get_header();
 get_template_part( 'template-parts/content', 'page' );
