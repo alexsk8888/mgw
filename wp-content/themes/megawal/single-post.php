@@ -1,8 +1,6 @@
 <?php
 
-/*
-Template Name: Post page
-*/
+
 get_header();
 echo '<div class="content_post_page"><h1>';
 the_title();

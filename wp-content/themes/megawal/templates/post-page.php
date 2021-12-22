@@ -1,7 +1,7 @@
 <?php
 
 /*
-Template Name: single Post page
+Template Name: Post page
 */
 get_header();
 get_template_part( 'template-parts/content', 'page' );
@@ -36,7 +36,7 @@ foreach( $my_posts as $post ){
 
         foreach ( $post_cb_field as $item ): 
            
-           echo wp_get_attachment_image($item['image'], array(279, 289), '', array( 'class' => 'one_sert', 'alt' => $item['alt']));
+           echo wp_get_attachment_image($item['image'], array(279, 190), '', array( 'class' => 'one_pos', 'alt' => $item['alt']));
            break;
         endforeach;
     }
