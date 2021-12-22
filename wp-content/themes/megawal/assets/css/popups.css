@@ -8,6 +8,7 @@
     display: flex;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap;
   }
   .images_bcgr, .thank_blank_bcgr {
     display: none;
@@ -28,6 +29,7 @@
   }
   .images-box {
     display: flex;
+    position: relative;
     flex-direction: column;
     align-items: center;
   }
@@ -97,6 +99,7 @@
   .full_size_sert {
     height: 80vh !important;
     width: 100% !important;
+    max-width: 100% !important;
     object-fit: contain;
   }
   

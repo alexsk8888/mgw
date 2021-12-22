@@ -3189,3 +3189,38 @@ padding-bottom: 25px;
 }
 }
 
+.post-main{
+
+}
+.portfolio_list{
+    display: flex;
+  flex-wrap: wrap;
+  font-weight: 400;
+  justify-content: space-between;
+  align-items: center;
+}
+.post_box{
+  width: 24%;
+  padding: 5px;
+  box-sizing: border-box;
+  background-color: #fff;
+  display: inline-block;
+  box-shadow: 0 0 5px rgba(117, 124, 153, .37);
+  margin-bottom: 10px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.title_post_box a{
+  opacity: .59;
+  color: #000;
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+}
+.content_post_page{
+  width: 90%;
+  margin: auto;
+}

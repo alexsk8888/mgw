@@ -110,10 +110,7 @@ function blue_title($string){
 
 
 	function wpdocs_styles_method() {
-		wp_enqueue_style(
-			'custom-style',
-			get_template_directory_uri() . '/css/main.css'
-		);
+
 		$color      = carbon_get_post_meta($post->ID,'mission_text_color');
 		$custom_css = "
 			.custom_zero{

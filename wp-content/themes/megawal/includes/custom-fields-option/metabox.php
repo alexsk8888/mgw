@@ -237,3 +237,16 @@ Container::make("post_meta", "Сертификаты")
         Field::make( 'textarea', 'seo_small_text', __( ' Текст который видно' ))->set_width( 50 )->set_rows(10),
         Field::make( 'rich_text', 'seo_full_text', __( ' Скрывающийся текст' ))->set_width( 50 )->set_rows(8),
         ) );
+
+
+    Container::make("post_meta", "изображения галереи")
+    ->show_on_post_type('post')
+    ->add_fields( array(
+
+        Field::make( 'complex', 'post_cb_field', 'Блок "галерея изображений"  максимум 20шт' )->set_layout( 'tabbed-horizontal' )->set_max( 20 )
+        
+        ->add_fields( array(
+            Field::make( 'image', 'image', __( ' изображение' ))->set_width( 10 ),
+            Field::make( 'textarea', 'alt', __( ' "Alt" иконки' ))->set_width( 10 ))),
+
+        ) );
