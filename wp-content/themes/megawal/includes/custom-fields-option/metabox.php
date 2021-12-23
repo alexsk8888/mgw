@@ -250,3 +250,15 @@ Container::make("post_meta", "Сертификаты")
             Field::make( 'textarea', 'alt', __( ' "Alt" иконки' ))->set_width( 10 ))),
 
         ) );
+
+
+    Container::make("post_meta", "Преимущества")
+    ->show_on_template("templates/benefits.php")
+    ->add_fields( array(
+        Field::make( 'complex', 'benefits', 'Блок - максимум 8шт' )->set_layout( 'tabbed-horizontal' )->set_max( 8 )
+        
+->add_fields( array(
+    Field::make( 'image', 'benefits_image', __( '01 фоновое изображение' ))->set_width( 50),
+    Field::make( 'rich_text', 'benefits_text', __( '01 текст' ))->set_width( 50 )->set_rows(8)))
+    ->set_required(true),
+     ));

@@ -3231,3 +3231,110 @@ padding-bottom: 25px;
 .title_post_box h2{
   text-align: center;
 }
+
+/* ----------------------------------- */
+
+.bro-portfolio,.bro-priemushestva{
+  background-color:#edf0fc
+}
+.bro-container{
+  max-width:1030px;
+  box-sizing:border-box;
+  zoom:1;
+  display:block;
+  position:relative;
+  width:100%;
+  margin:auto
+}
+.bro-container:after,.bro-container:before{
+  display:table;
+  content:""
+}
+.bro-priemushestva h2,.bro-priemushestva h3{
+  font-family:Helvetica;
+  font-size:30px;
+  font-weight:900;
+  line-height:60px
+}
+.bro-col3{
+  flex:.33 0 0;
+  width:33%
+}
+.bro-priemushestva .bro-col3 .bro-priemushestva-item{
+  height:100%;
+  margin-bottom:13px
+}
+.bro-priemushestva h3{
+  line-height:34px
+}
+.bro-priemushestva h4,.bro-priemushestva p{
+  font-family:Helvetica;
+  font-size:24px;
+  font-weight:700;
+  line-height:34px
+}
+.bro-priemushestva p{
+  font-size:18px;
+  font-weight:400;
+  line-height:22px
+}
+.bro-col06{
+  flex:.66 0 0;
+  width:66%
+}
+.bro-priemushestva .bro-priemushestva-item:nth-child(2){
+  margin-bottom:0
+}
+.bro-priemushestva .bro-priemushestva-item2{
+  color:#1e0678;
+  text-align:right
+}
+.bro-priemushestva .bro-row{
+  margin:0 0 13px
+}
+.bro-row{
+  display:flex;
+  width:100%;
+  justify-content:space-between;
+  margin:45px 0
+}
+.bro-row>.bro-priemushestva-item{
+  margin-bottom:0
+}
+.bro-priemushestva .bro-priemushestva-item1{
+  color:#fff;
+  text-align:left
+}
+.bro-priemushestva .bro-priemushestva-item{
+  background-size:cover;
+  background-repeat:no-repeat;
+  padding:40px 25px;
+  display:flex;
+  justify-content:flex-end;
+  flex-direction:column;
+  width:100%;
+  margin-bottom:13px
+}
+.bro-priemushestva h3, .bro-priemushestva h4{
+  margin: 0;
+}
+.benefits_title{
+  margin:  0 0 0 50px;
+}
+@media (max-width: 900px){
+
+  .bro-priemushestva .bro-row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bro-priemushestva .bro-col06, .bro-priemushestva .bro-col2, .bro-priemushestva .bro-col3 {
+  width: 90%;
+}
+.bro-priemushestva h3, .bro-priemushestva h4, .benefits_title{
+  text-align: center;
+}
+.bro-priemushestva .bro-priemushestva-item:nth-child(2) {
+  margin-bottom: 15px;
+}
+}
