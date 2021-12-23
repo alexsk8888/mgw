@@ -320,6 +320,13 @@ background: linear-gradient(180deg, #fee032, #fd9e27);
 background: linear-gradient(to right, #ffa200 0, #fdd94a 100%) #ffc000;
 box-shadow: 0 11px 14px rgba(0, 0, 0, .33);
 }
+
+.wp-block-button__link {
+background: linear-gradient(180deg, #fee032, #fd9e27);
+background: linear-gradient(to right, #ffa200 0, #fdd94a 100%) #ffc000;
+box-shadow: 0 11px 14px rgba(0, 0, 0, .33);
+}
+
 .bro-footer .dev-logo-l {
 text-align: center;
 display: block;
@@ -3322,6 +3329,11 @@ padding-bottom: 25px;
   margin:  0 0 0 50px;
 }
 @media (max-width: 900px){
+  .table_price tr td:nth-child(2n-1) {
+    text-align: left;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+}
 
   .bro-priemushestva .bro-row {
     flex-direction: column;
@@ -3337,4 +3349,81 @@ padding-bottom: 25px;
 .bro-priemushestva .bro-priemushestva-item:nth-child(2) {
   margin-bottom: 15px;
 }
+}
+
+
+
+.table_price tr td:nth-child(2n-1) {
+  text-align: left;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.table_price table, th, td {
+  background-color: rgba(75, 149, 221, .21);
+  text-shadow: none;
+}
+
+.table_price tr:nth-child(2n-1) td {
+  background-color: #edf0fc;
+}
+
+.table_price table,.table_price  th,.table_price  td {
+  border: solid 1px #ffffff !important;
+}
+
+.table_price tr td:nth-child(2n) {
+  text-align: center;
+  color: #000;
+  font-family: Helvetica;
+  font-size: 18px;
+  line-height: 48px;
+  font-weight: 700;
+  width: 300px;
+}
+
+.table_price tr td:nth-child(2n-1) a {
+  color: #000;
+  font-family: Helvetica;
+  font-size: 18px;
+  line-height: 48px;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+.table_price tr td:nth-child(2n) {
+  text-align: center;
+  color: #000;
+  font-family: Helvetica;
+  font-size: 18px;
+  line-height: 48px;
+  font-weight: 700;
+  width: 300px;
+}
+.price_line{
+  height: 1px;
+  margin: 20px 0;
+  display: block;
+  width: 100%;
+  background-color: #dfe3f2;
+}
+.bro-ceninaofis {
+  background-image: url(./assets/image/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 60px;
+}
+.bro-card {
+  padding: 35px;
+  background-color: rgba(255, 255, 255, .95);
+  box-shadow: 0 0 5px rgba(0, 0, 0, .16);
+  box-sizing: border-box;
+}
+.wp-block-table table {
+  border-collapse: collapse;
+  width: fit-content !important;
+}
+.price_post_page{
+  font-size: 36px !important;
+  font-weight: bold;
 }
