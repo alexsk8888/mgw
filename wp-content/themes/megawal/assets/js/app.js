@@ -131,7 +131,7 @@ var $tabs = function (target) {
       };
 
     _eventTabsShow = new CustomEvent('tab.show', { detail: _elemTabs });
-
+if(_elemTabs){
     _elemTabs.addEventListener('click', function (e) {
       var tabsLinkTarget = e.target;
       // завершаем выполнение функции, если кликнули не по ссылке
@@ -142,7 +142,7 @@ var $tabs = function (target) {
       e.preventDefault();
       _showTab(tabsLinkTarget);
     });
-
+}
     return {
       showTab: function (target) {
         _showTab(target);
@@ -218,6 +218,7 @@ let one_sert =  Array.from(document.querySelectorAll('.one_sert')),
          }, false);
 
     });
+    if(images_bcgr){
     images_bcgr.addEventListener('click', function(e) {
       close_sert.forEach(function(item, i) {
         images_box[i].classList.remove('images-box_active')       
@@ -226,7 +227,7 @@ let one_sert =  Array.from(document.querySelectorAll('.one_sert')),
         close_sert[i].classList.remove('close_sert_active')  
         zoom[i].style.display = 'block' 
       },)
-    });
+    });}
 // --------------------------------
 
 let thank_blank =  Array.from(document.querySelectorAll('.thank_blank')),
@@ -245,20 +246,21 @@ let thank_blank =  Array.from(document.querySelectorAll('.thank_blank')),
 
     });
 
-     console.log(" click closer")
+    
+     if(thank_blank_bcgr){
      thank_blank_bcgr.addEventListener('click', function(e) {
               thank_blank_bcgr.classList.remove('thank_blank_bcgr_active')
         close_thank_blank.classList.remove('close_sert_active')  
-            
+             
                
          }, false);
 
     
     thank_blank_bcgr.addEventListener('click', function(e) {
       
-      console.log(" click thank_blank_bcgr")
+     
         thank_blank_bcgr.classList.remove('thank_blank_bcgr_active')
         close_thank_blank.classList.remove('close_sert_active')  
         
       
-    });
+    });}
