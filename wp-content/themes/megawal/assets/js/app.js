@@ -55,13 +55,22 @@ $(document).ready(function(){
         dots: true,
         nav: true,
         lazyLoad: true,
-        navContainer: ".navBtnCarousel",
         dotsContainer: "#icons_projects",
         rewind: true,
         autoplay: true,
         loop:"true"
     });
   });
+$('.thumb').click(function(){
+    $('.owl-carousel').trigger('to.owl.carousel', [$(this).index(), 500]);
+});
+var _slider = main_carousel_projects.find(".owl-carousel");
+$('.owl-next').click(function () {
+    $(_slider).trigger('next.owl.carousel');
+});
+$('.owl-prev').click(function () {
+    $(_slider).trigger('prev.owl.carousel');
+});
 
   $(".slide-two").owlCarousel({
     items:3,

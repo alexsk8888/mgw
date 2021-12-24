@@ -3,7 +3,6 @@
 Template Name: Main page
 */
 
-
  get_header();
   get_template_part( 'template-parts/content', 'page' );
  ?>
@@ -54,16 +53,12 @@ echo   "<div class='projects_info'>
          echo  "</div>";        // end  slider_item
          }
        }
-     echo "</div></div>";  // end slider_wrapper/ / end main_carousel_projects
-//         echo "<a class='slider_control slider_control_left slider_control_show' href='#' role='button'></a>
-//		       <a class='slider_control slider_control_right slider_control_show' href='#' role='button'></a>
-//		  ";
+     echo "</div></div>";
 
  echo "<div id='icons_projects'>";
  foreach ($main_photo_projects as $main_photo_item){
      if(!empty($main_photo_item)){
-         echo "<div class='main_photo_project' role='button'
-                onclick='open_project(". $main_photo_item['link'] .", this);'>"
+         echo "<div class='main_photo_project thumb' role='button'>"
              . wp_get_attachment_image($main_photo_item['photo'], 'post-thumbnail', '', array( 'alt' => $main_photo_item['alt'],))
              . "</div>";
      }
