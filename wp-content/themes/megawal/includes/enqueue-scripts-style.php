@@ -36,6 +36,7 @@ function so_style_pages() {
     wp_enqueue_style( 'so-projects_style', get_template_directory_uri() . '/assets/css/projects_style.css', array(), null, 'all' );
     wp_enqueue_style( 'so-products_page', get_template_directory_uri() . '/assets/css/products_page.css', array(), null, 'all' );
     wp_enqueue_style( 'popups', get_template_directory_uri() . '/assets/css/popups.css', array(), null, 'all' );
+    wp_enqueue_style( 'glass_partitions', get_template_directory_uri() . '/assets/css/stationary_partitions.css', array(), null, 'all' );
 
     wp_enqueue_script( 'owl', get_stylesheet_directory_uri() . '/assets/js/owl.carousel.min.js', array('jquery'), null, true );
 	wp_enqueue_style("owl_carousel_min",get_bloginfo('stylesheet_directory')."/assets/css/owl.carousel.min.css");

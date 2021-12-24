@@ -213,8 +213,6 @@ Container::make("post_meta", "Сертификаты")
     ->add_fields( array(
         Field::make( 'image', 'image', __( ' изображение' ))->set_width( 10 ),
         Field::make( 'textarea', 'alt', __( ' "Alt" иконки' ))->set_width( 10 ))),
-    
-
     ) );
 
 
@@ -233,10 +231,74 @@ Container::make("post_meta", "Сертификаты")
  
     ->show_on_template("templates/front-page.php")
     ->add_fields( array(
-
         Field::make( 'textarea', 'seo_small_text', __( ' Текст который видно' ))->set_width( 50 )->set_rows(10),
         Field::make( 'rich_text', 'seo_full_text', __( ' Скрывающийся текст' ))->set_width( 50 )->set_rows(8),
         ) );
+
+
+Container::make("post_meta", "Баннер стеклянных перегородок")
+
+    ->show_on_template("templates/stationary_partitions.php")
+    ->add_fields( array(
+        Field::make( 'image', 'background_img', __( ' Фоновое изображение' ) )->set_width( 30 ),
+        Field::make( 'text', 'banner_title', __( ' Заголовок блока' ))->set_width( 70 ),
+    ) );
+
+Container::make("post_meta", "Стационарные перегородки")
+
+    ->show_on_template("templates/stationary_partitions.php")
+    ->add_fields( array(
+
+        Field::make( 'complex', 'stnr_block_first', 'Первый блок' )->set_layout( 'tabbed-horizontal' )->set_max(1)
+            ->add_fields( array(
+                Field::make( 'image', 'photo', __( ' Изображение' ))->set_width( 50 ),
+                Field::make( 'text', 'alt', __( ' "Alt" иконки' ))->set_width( 50 ),
+                Field::make( 'rich_text', 'info_text', __( ' Информационный текст' ))->set_width( 100 ))),
+
+        Field::make( 'complex', 'stnr_block_second', 'Второй блок' )->set_layout( 'tabbed-horizontal' )->set_max(1)
+            ->add_fields( array(
+                Field::make( 'image', 'background_img', __( 'Фоновое Изображение' ))->set_width( 50 ),
+                Field::make( 'text', 'alt', __( ' "Alt" иконки' ))->set_width( 50 ),
+                Field::make( 'text', 'title', __( ' Заголовок блока' ))->set_width( 70 ),
+            )),
+
+        Field::make( 'complex', 'stnr_block_second_list', ' Список второго блока' )->set_layout( 'tabbed-horizontal' )->set_max(7)
+            ->add_fields( array(
+                Field::make( 'rich_text', 'li_text', __( 'Текст списка' ))->set_width(100))),
+
+        Field::make( 'rich_text', 'type_partitions', __( ' Заголовок "Виды перегородок" ' )),
+
+        Field::make( 'complex', 'stnr_type_partitions', 'Виды перегородок' )->set_layout( 'tabbed-horizontal' )->set_max(6)
+            ->add_fields( array(
+                Field::make( 'image', 'photo', __( ' Изображение' ))->set_width( 50 ),
+                Field::make( 'text', 'alt', __( ' "Alt" иконки' ))->set_width( 50 ),
+                Field::make( 'text', 'info_text', __( ' Информационный текст' ))->set_width( 50 ),
+                Field::make( 'text', 'price', __( ' Цена' ))->set_width( 50 ),
+                )),
+
+        Field::make( 'rich_text', 'door_type_title', __( ' Заголовок "Виды дверей" ' )),
+
+        Field::make( 'complex', 'stnr_door_type_bg', 'Фоновое Изображение "Виды дверей"' )->set_layout( 'tabbed-horizontal' )->set_max(1)
+            ->add_fields( array(
+                Field::make( 'image', 'background_img', __( 'Фоновое Изображение' ))->set_width( 50 ),
+                Field::make( 'text', 'alt', __( ' "Alt" иконки' ))->set_width( 50 ),
+            )),
+
+        Field::make( 'complex', 'stnr_door_type', 'Виды дверей' )->set_layout( 'tabbed-horizontal' )->set_max(6)
+            ->add_fields( array(
+                Field::make( 'image', 'photo', __( ' Изображение' ))->set_width( 50 ),
+                Field::make( 'text', 'alt', __( ' "Alt" иконки' ))->set_width( 50 ),
+                Field::make( 'text', 'info_text', __( ' Информационный текст' ))->set_width( 50 ),
+                Field::make( 'text', 'price', __( ' Цена' ))->set_width( 50 ),
+            )),
+
+        Field::make( 'text', 'stnr_projects_title', __( ' Заголовок "Выполненные проекты" ' )),
+
+        Field::make( 'rich_text', 'stnr_info_block', __( ' Информационный текст" ' )),
+
+
+
+    ) );
 
 
     Container::make("post_meta", "изображения галереи")
@@ -262,3 +324,4 @@ Container::make("post_meta", "Сертификаты")
     Field::make( 'rich_text', 'benefits_text', __( '01 текст' ))->set_width( 50 )->set_rows(8)))
     ->set_required(true),
      ));
+
