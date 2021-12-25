@@ -2,7 +2,7 @@
 
 
 get_header();
-echo '<div class="content_post_page"><h1>';
+echo '<div class="container"><div class="content_post_page"><h1>';
 the_title();
 echo '</h1>';
 get_template_part( 'template-parts/content', 'page' );
@@ -30,7 +30,7 @@ $sert_counter=0;
 
 ?>
 
- 
+ </div>
 </ul>
 </main>
  <?php
