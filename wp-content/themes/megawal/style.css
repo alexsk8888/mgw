@@ -25,6 +25,10 @@ main, section, footer{
   margin: 0;
   font-size: 100%;
 }
+.head__logo_text_h4,
+.head__logo_text_h5{
+margin: 0 !important;
+}
 header {
 padding: 0;
 margin: 0px 0 20px !important;

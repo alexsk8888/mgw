@@ -68,8 +68,8 @@
 					<!--		              <img src="/wp-content/themes/megawal/img/28.01.19/logo.svg" alt="MEGAWALL">--><span class="head__logo_text">MEGAWALL</span> </a>
 				<!--<div class="h1" itemprop="name">Стеклянные офисные перегородки для офисов и ТЦ</div>-->
 				<div class="bro-logo-text">
-					<h4>Все виды остекления</h4>
-					<h5>Перегородки. Фасады. Интерьеры.</h5>
+					<h4 class="head__logo_text_h4">Все виды остекления</h4>
+					<h5 class="head__logo_text_h5">Перегородки. Фасады. Интерьеры.</h5>
 				</div>
 			</div>
 			<div class="col-xs-1 text-center"></div>
