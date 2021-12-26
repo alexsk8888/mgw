@@ -78,6 +78,21 @@
   line-height: 22px;
   margin-bottom: 20px;
 }
+.section_form .wpcf7 {
+  width: 288px;
+  margin: 0 auto;
+}
+.section_form .submit {
+  width: 100%;
+  background: linear-gradient(to right, #ffa200 0, #fdd94a 100%) #ffc000;
+  box-shadow: 0 11px 14px rgba(0, 0, 0, 0.33);
+  color: #fffefe;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+  font-size: 18px;
+  font-family: HelveticaBold, Helvetica, Arial, sans-serif;
+  padding: 15px;
+  border-radius: 25px;
+}
 
 .stnr_prn_first {
   display: flex;
@@ -323,6 +338,75 @@ strong {
   padding: 70px 0;
 }
 
+.services {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.service_block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 1030px;
+  margin: auto;
+  padding-top: 140px;
+  padding-bottom: 80px;
+  zoom: 1;
+  margin: auto;
+}
+.service_block .owl-carousel {
+  height: auto;
+}
+.service_block h2 {
+  color: #fff;
+  font-family: Helvetica, sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 50px;
+  text-align: center;
+}
+.service_block h2 strong {
+  color: #4b95dd;
+  font-family: UniSansHeavyCAPS;
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 70px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.service_block .service {
+  display: flex;
+  flex-direction: column;
+}
+.service_block .service .srv_title {
+  height: 50px;
+  width: 100%;
+  line-height: 1;
+  text-align: center;
+  color: #fff;
+  font-family: Helvetica, sans-serif;
+  font-size: 21px;
+  font-weight: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.service_block .service .srv_img {
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 @media (max-width: 1700px) {
   .stnr_prn_second {
     padding-right: 220px;
@@ -453,6 +537,15 @@ strong {
   .stnr_prn_second h2:after {
     border-width: 39px 0 39px 30px;
   }
+
+  .service_block h2 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .service_block h2 strong {
+    font-size: 64px;
+    line-height: 64px;
+  }
 }
 @media (max-width: 700px) {
   .stnr_prn_second {
@@ -487,6 +580,10 @@ strong {
   }
 }
 @media (max-width: 500px) {
+  .section_form .submit {
+    padding: 10px;
+  }
+
   .stnr_prn_second h2 {
     font-size: 24px;
     line-height: 24px;
@@ -502,8 +599,21 @@ strong {
     font-size: 16px;
     line-height: 16px;
   }
+
+  .service_block h2 {
+    font-size: 36px;
+    line-height: 36px;
+  }
+  .service_block h2 strong {
+    font-size: 54px;
+    line-height: 54px;
+  }
 }
 @media (max-width: 420px) {
+  form .form-control {
+    height: 35px !important;
+  }
+
   .stnr_prn_second h2 {
     font-size: 22px;
     line-height: 1;

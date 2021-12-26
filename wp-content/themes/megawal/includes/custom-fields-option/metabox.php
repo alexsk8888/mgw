@@ -202,7 +202,7 @@ Container::make("post_meta", "О компании")
         Field::make( 'textarea', 'alt', __( ' "Alt" иконки' ))->set_width( 10 ))),
     Field::make( 'rich_text', 'about', __( ' текст после слайдера' )),
 
-    ) );
+    ));
 
 Container::make("post_meta", "Сертификаты")
  
@@ -294,9 +294,20 @@ Container::make("post_meta", "Стационарные перегородки")
 
         Field::make( 'text', 'stnr_projects_title', __( ' Заголовок "Выполненные проекты" ' )),
 
-        Field::make( 'rich_text', 'stnr_info_block', __( ' Информационный текст" ' )),
+        Field::make( 'rich_text', 'stnr_slider_title', __( ' Заголовок "Другие услуги компании" ' )),
 
+        Field::make( 'complex', 'stnr_slider_bg', 'Фоновое Изображение "Другие услуги компании" ' )->set_layout( 'tabbed-horizontal' )->set_max(1)
+        ->add_fields( array(
+            Field::make( 'image', 'background_img', __( 'Фоновое Изображение' ))->set_width( 50 ),
+            Field::make( 'text', 'alt', __( ' "Alt" иконки' ))->set_width( 50 ),
+        )),
 
+        Field::make( 'complex', 'stnr_slider', 'Слайдер' )->set_layout( 'tabbed-vertical' )->set_max( 20 )
+        ->add_fields( array(
+            Field::make( 'image', 'photo', __( ' Photo' ) )->set_width( 30 ),
+            Field::make( 'text', 'alt', __( ' Альтернативный текст для изображения "Alt"' ) )->set_width( 20 ),
+            Field::make( 'text', 'text', __( 'Текст' ) )->set_width( 50 ),
+        ) ),
 
     ) );
 
@@ -317,7 +328,7 @@ Container::make("post_meta", "Стационарные перегородки")
     Container::make("post_meta", "Преимущества")
     ->show_on_template("templates/benefits.php")
     ->add_fields( array(
-        Field::make( 'complex', 'benefits', 'Блок - максимум 8шт' )->set_layout( 'tabbed-horizontal' )->set_max( 8 )
+        Field::make( 'complex', 'benefits', 'Блок - максимум 8шт' )->set_layout( 'tabbed-vertical' )->set_max( 8 )
         
 ->add_fields( array(
     Field::make( 'image', 'benefits_image', __( '01 фоновое изображение' ))->set_width( 50),
