@@ -89,6 +89,28 @@ $('.owl-prev').click(function () {
     navContainer: ".about_nav",
 
 });
+  $(".services_slider").owlCarousel({
+      items:4,
+      margin: 20,
+      mouseDrag: true,
+      touchDrag: true,
+      lazyLoad: true,
+      rewind: true,
+      autoplay: true,
+      loop:"true",
+      responsiveClass:true,
+      responsive:{
+          0:{
+              items:1,
+          },
+          800:{
+              items:3,
+          },
+          1000:{
+              items:4,
+          }
+      }
+  });
 
 // ------------------виды офисных прегородок-------------------
 
