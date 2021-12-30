@@ -27,8 +27,9 @@ $new_banner_title = $span_content;
                  <strong>Цена</strong> от 1900 руб за кв.м</div>
               <div class="form-heading">
                 <p>Оставьте заявку на бесплатный расчет стоимости </p>
-              </div>   
-            </div>';
+              </div>'
+                 .do_shortcode('[contact-form-7 id="790" title="calculate"]').
+         '</div>';
     ?>
 </div>
 
@@ -171,10 +172,52 @@ $new_banner_title = $span_content;
         }
     }
     echo "</div></div></div>";
-    $stnr_info_block = carbon_get_post_meta($post->ID, 'stnr_info_block');
-    ?>
-    <div class="stnr_info_block"></div>
 
+   echo '<div class="demo">
+        '.wpautop(carbon_get_post_meta( $front_page_id, 'seo_small_text' ));
+
+        if(carbon_get_post_meta( $front_page_id, 'seo_full_text' )){
+        echo
+        '
+        <input class="hide" id="hd-1" type="checkbox">
+        <label for="hd-1">
+            Подробнее..
+        </label>
+
+        <div>
+            '.wpautop(carbon_get_post_meta( $front_page_id, 'seo_full_text' )).'
+
+            <label class = "close_seo_text"for="hd-1"> Свернуть</label>
+
+        </div>';
+        }
+      echo  '<br/>
+        <br/>
+    </div>';
+
+    $services_title = carbon_get_post_meta($post->ID, 'stnr_slider_title');
+    $services_bg = carbon_get_post_meta($post->ID, 'stnr_slider_bg');
+    $services_slider = carbon_get_post_meta($post->ID, 'stnr_slider');
+
+    ?>
+    <div class="services" style="background-image: url(<?php echo wp_get_attachment_image_url($services_bg[0]['background_img']) ?> )">
+        <div class="service_block">
+           <?php echo $services_title?>
+            <div class="services_slider owl-carousel">
+                <?php
+                foreach ($services_slider as $service){
+                    if(!empty($service)){
+                        echo "<div class='service'>
+                                <div class='srv_title'>". $service['text'] ."</div>
+                                <div class='srv_img' style='background-image: url(".wp_get_attachment_image_url($service['photo']) ." )'></div>
+                              </div>";
+                    }
+                }
+                ?>
+            </div>
+        </div>
+
+    </div>
 </main>
 <?php
 get_sidebar();
