@@ -3,7 +3,10 @@
 /*
 Template Name: Post page
 */
-get_header();
+get_header();?>
+
+<div class="container">
+<?php
 get_template_part( 'template-parts/content', 'page' );
 ?>
 
@@ -14,7 +17,7 @@ get_template_part( 'template-parts/content', 'page' );
 
 $my_posts = get_posts( array(
 	'numberposts' => 100,
-	'category_name' => 'portfolio',
+	'category_name' => '',
 	'orderby'     => 'date',
 	'order'       => 'DESC',
 	'post_type'   => 'post',
@@ -50,7 +53,8 @@ wp_reset_postdata(); // сброс
 
 ?>
 </ul>
-</main>
+
+</main></div>
  <?php
  get_sidebar();
  get_footer();

@@ -325,3 +325,78 @@ Container::make("post_meta", "Стационарные перегородки")
     ->set_required(true),
      ));
 
+    // ------------------------- about page
+
+    Container::make("post_meta", "О компании")
+    ->show_on_template("templates/about.php")
+
+->add_fields( array(
+    Field::make( 'rich_text', 'about1_text', __( '01 текст' ))->set_width( 50 )->set_rows(8),
+    Field::make( 'image', 'about1_image', __( '01 фоновое изображение' ))->set_width( 30),
+    Field::make( 'text', 'about1_alt', __( ' "Alt"   изображения' ))->set_width( 20 ),
+    ));
+
+
+     Container::make("post_meta", "Направления")
+     ->show_on_template("templates/about.php") 
+
+->add_fields( array(
+    Field::make( 'text', 'direction_title', __( ' заголовок блока' ))->set_width( 20 ),
+    Field::make( 'image', 'direction_image', __( ' Изображение' ) )->set_width( 15 ),
+    Field::make( 'text', 'direction_alt', __( ' "Alt"   изображения' ))->set_width( 15 ),
+     Field::make( 'rich_text', 'direction_about', __( ' текст' ))->set_width( 50 ),
+));
+     Container::make("post_meta", "Семья")
+     ->show_on_template("templates/about.php") 
+
+->add_fields( array(
+    Field::make( 'text', 'family_title', __( ' заголовок блока' ))->set_width( 20 ),
+    Field::make( 'rich_text', 'family_about', __( ' текст' ))->set_width( 50 ),
+     Field::make( 'image', 'family_image', __( ' Изображение' ) )->set_width( 15 ),
+     Field::make( 'text', 'family_alt', __( ' "Alt"   изображения' ))->set_width( 15 ),
+));
+
+     Container::make("post_meta", "Про производство")
+     ->show_on_template("templates/about.php") 
+
+->add_fields( array(
+    Field::make( 'text', 'proizv_title', __( ' заголовок блока' ))->set_width( 20 ),
+    Field::make( 'image', 'proizv_image', __( ' Изображение' ) )->set_width( 15 ),
+    Field::make( 'text', 'proizv_alt', __( ' "Alt"   изображения' ))->set_width( 15 ),
+    Field::make( 'rich_text', 'proizv_about', __( ' текст' ))->set_width( 50 ),
+));
+
+Container::make("post_meta", "Миссия")
+->show_on_template("templates/about.php") 
+
+->add_fields( array(
+Field::make( 'text', 'mission_title', __( ' заголовок блока' ))->set_width( 20 ),
+Field::make( 'rich_text', 'mission_about', __( ' текст' ))->set_width( 50 ),
+Field::make( 'image', 'mission_image', __( ' Изображение' ) )->set_width( 15 ),
+Field::make( 'text', 'mission_alt', __( ' "Alt"   изображения' ))->set_width( 15 ),
+));
+
+    Container::make("post_meta", "Наша команда")
+    ->show_on_template("templates/about.php")
+    ->add_fields( array(
+
+        Field::make( 'complex', 'command', 'Блок - максимум 8шт' )->set_layout( 'tabbed-horizontal' )->set_max( 8 )
+        
+    ->add_fields( array(
+        Field::make( 'image', 'photo', __( 'фото' ))->set_width( 33),
+        Field::make( 'text',  'alt', __( ' "Alt"   фото' ))->set_width( 15 ),
+        Field::make( 'text',  'name', __( 'Имя' ))->set_width( 33 )->set_required(true),
+        Field::make( 'text',  'prof', __( 'Должность' ))->set_width( 33 )->set_required(true)
+        )),
+     ));
+
+     Container::make("post_meta", "Сертификаты")
+ 
+     ->show_on_template("templates/about.php")
+     ->add_fields( array(
+     
+         Field::make( 'complex', 'sert', 'Блок "плитка"  максимум 20шт' )->set_layout( 'tabbed-horizontal' )->set_max( 20 )
+         ->add_fields( array(
+             Field::make( 'image', 'image', __( ' изображение' ))->set_width( 10 ),
+             Field::make( 'textarea', 'alt', __( ' "Alt" иконки' ))->set_width( 10 ))),
+         ) );

@@ -44,8 +44,8 @@ $(document).ready(function(){
         nav: true,
         lazyLoad: true,
         navContainer: ".navBtnCarousel",
-        dotsContainer: ".owlDotsBlock",
-        rewind: true,
+        dotsContainer: ".owlDotsHBlock",
+        
         autoplay: true,
         loop:"true"
     });
@@ -81,9 +81,6 @@ $('.owl-prev').click(function () {
     nav: true,
     autoWidth: true,
     lazyLoad: true,
-    navContainer: ".navBtnCarousel",
-    dotsContainer: ".owlDotsBlock",
-    rewind: true,
     autoplay: true,
     loop:"true",
     navContainer: ".about_nav",

@@ -130,7 +130,7 @@ if( $slides ) {
 
 	 echo do_shortcode( '[contact-form-7 id="82" title="Buner Form"]' ). '</div>
 	
-	 </div> <div class="owlDotsBlock"></div>';
+	 </div> <div class="owlDotsHBlock"></div>';
 	 }
 	 ?>
 	 
