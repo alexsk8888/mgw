@@ -281,10 +281,19 @@ echo'
                 <div class="count">
         <div class="count_timer_text">'.wpautop(carbon_get_post_meta( $post->ID, 'count_timer_text' )).'</div>
         <div class ="counter_digital">
-        '. 
-        do_shortcode('[ycd_countdown id=687]').
-        // do_shortcode('[ycd_countdown id=646]').
-         '
+        <div class="timer">
+        <div class="end_time">
+            '. 
+            carbon_get_theme_option( 'date_and_time' ) .
+             '
+        </div>
+        <div class="timer__items">
+          <div class="timer__item num timer__days">00</div>
+          <div class="timer__item num timer__hours">00</div>
+          <div class="timer__item num timer__minutes">00</div>
+          <div class="timer__item num timer__seconds">00</div>
+        </div>
+      </div>
          </div></div>
         <div class="count_form">  '. 
         do_shortcode('[contact-form-7 id="647" title="sale"]').

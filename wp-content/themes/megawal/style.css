@@ -3715,3 +3715,50 @@ td {
   margin: auto;
 }
 
+/* counter */
+
+.timer__items {
+  display: flex;
+  font-size: 48px;
+}
+.timer__item {
+  position: relative;
+  min-width: 60px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+.timer__item::before {
+  content: attr(data-title);
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  font-size: 14px;
+}
+
+.end_time{
+    display: none;
+}
+.timer .num {
+  background: url(./assets/image/countflip.png) no-repeat;
+  width: 60px;
+  height: 66px;
+  line-height: 66px;
+  color: #959daa;
+  font-size: 35px;
+  font-family: HelveticaNeueLTStd-Bd;
+  font-weight: 400;
+  position: relative;
+}
+.timer .num:before {
+  position: absolute;
+  background: url(./assets/image/countflip-divider.png) no-repeat;
+  width: 50px;
+  height: 1px;
+  top: 44%;
+  left: 30px;
+}
+/* end counter */

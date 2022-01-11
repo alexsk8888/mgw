@@ -224,11 +224,7 @@
 .count_text p{
     text-align: center;
 }
-.counter_digital {
-    width: 285px !important;
-    background: #ffffff80;
-    box-shadow: 0 0 19px 5px white;
-}
+
 .count_timer_text{
     width: 285px !important;
     color: #ffffff;
