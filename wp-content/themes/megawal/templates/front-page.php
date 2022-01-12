@@ -231,6 +231,7 @@ echo
                 foreach ( $about_slider as  $item ): 
                 echo
                 '<div class="about_item">
+                
                 '
                 . wp_get_attachment_image($item['image'], 'thumbnail', '', array( 'alt' => $item['alt'], 'class' => 'thank_blank')). '
                 </div>';
@@ -240,6 +241,8 @@ echo
             <div class="thank_blank_bcgr">
             <div class="than_blank_box">
             <div class="close_thank_blank"></div>
+            <span class="next_than_blank dashicons dashicons-arrow-right-alt2"></span>
+            <span class="prev_than_blank dashicons dashicons-arrow-left-alt2"></span>
             <img src="" class="thank_blank_full">
             </div></div>
                 <div class="about_nav">
@@ -258,7 +261,9 @@ foreach ( $sert as $item ):
 
     echo'
     <div class="images-box">
-    <div class="close_sert"></div>'
+    <div class="close_sert"></div>
+    <span class="next_img_portfolio dashicons dashicons-arrow-right-alt2"></span>
+    <span class="prev_img_portfolio dashicons dashicons-arrow-left-alt2"></span>'
   
      . wp_get_attachment_image($item['image'], 'post-thumbnail', '', array( 'class' => 'one_sert', 'alt' => $item['alt'])). ' 
 <div class="zoom">Увеличить</div>
