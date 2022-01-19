@@ -418,3 +418,23 @@ Field::make( 'text', 'mission_alt', __( ' "Alt"   изображения' ))->se
              Field::make( 'image', 'image', __( ' изображение' ))->set_width( 10 ),
              Field::make( 'textarea', 'alt', __( ' "Alt" иконки' ))->set_width( 10 ))),
          ) );
+
+
+     Container::make("post_meta", "Вакансии")
+ 
+     ->show_on_template("templates/vakant.php")
+     ->add_fields( array(
+     
+         Field::make( 'complex', 'vakants', 'Одна вакансия' )->set_layout( 'tabbed-vertical' )->set_max( 20 )
+         ->add_fields( array(
+            Field::make( 'text',  'prof', __( 'Должность' ))->set_required(true),
+            Field::make( 'text',  'zp', __( 'средняя з/п' )),
+            Field::make( 'complex', 'skils', '.. должен знать и уметь:' )->set_layout( 'tabbed-vertical' )->set_max( 20 )
+            ->add_fields( array(
+                Field::make( 'text',  'skil', __( 'текст' ))
+                ) ),
+
+         ) ),
+
+         ) );
+         

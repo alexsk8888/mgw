@@ -35,6 +35,10 @@ header {
   padding: 0;
   margin: 0px 0 20px !important;
 }
+input, label, textarea {
+  font-weight: 300;
+  font-size: 13px;
+}
 .entry-header {
   display: none;
 }
@@ -100,6 +104,22 @@ header {
   text-align: right;
 }
 
+.btn {
+  color: #fffefe;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .75);
+  font-size: 18px;
+  padding: 15px 35px;
+  border-radius: 25px;
+}
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  user-select: none;
+}
 .btn-yellow:active,
 .btn-yellow:hover {
   color: #fff !important;
@@ -107,7 +127,11 @@ header {
   background: linear-gradient(180deg, #e2651d 0, #a6220f);
   border-color: #cdb328;
 }
-
+.btn, form .form-heading h4, form .form-heading h5 {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: HelveticaBold, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+}
 .callback__phone:before {
   content: "";
   position: absolute;
@@ -3763,3 +3787,186 @@ td {
 }
 /* end counter */
 
+/* vacansii */
+
+.bro-vacansii {
+  color: #545454;
+  font-family: Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 34px;
+  background-image: url(../img/28.01.19/bg3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 30px;
+}
+.bro-vacansii h1 {
+  color: #000;
+  font-family: Helvetica;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 100px;
+}
+.bro-vacansii-card {
+  background-color: rgba(255, 255, 255, .95);
+  box-shadow: 0 0 5px rgba(0, 0, 0, .16);
+  padding: 30px;
+  margin-bottom: 30px;
+}
+.bro-vacansii h2 {
+  color: #000;
+  font-family: Helvetica;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 34px;
+}
+.bro-vacansii .bro-line {
+  height: 1px;
+  background-color: #dfe3f2;
+  margin: 10px;
+  width: 100%;
+}
+.bro-vacansii h3 {
+  font-family: Helvetica;
+  font-size: 18px;
+  line-height: 34px;
+  color: #000;
+  font-weight: 700;
+  margin: 15px 0;
+}
+.bro-vacansii h3 img {
+  margin-right: 5px;
+}
+.bro-vacansii h3 span {
+  color: #555;
+  font-weight: 400;
+}
+
+.bro-vacansii ul {
+  list-style: none;
+  padding: 0;
+  margin: auto;
+}
+.bro-vacansii li {
+  display: block;
+  position: relative;
+  padding-left: 20px;
+}
+.bro-vacansii li:before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  margin: auto;
+  left: 5px;
+  width: 9px;
+  height: 9px;
+  background-color: #4b95dd;
+  border-radius: 50%;
+}
+.bro-vacansii .bro-form form {
+  background-color: #edf0fc;
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+}
+.bro-form-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+div.wpcf7-response-output {
+  margin: 2em 0.5em 1em;
+  padding: 0.2em 1em;
+}
+
+.bro-vacansii .bro-form input[type=email], .bro-vacansii .bro-form input[type=tel], .bro-vacansii .bro-form input[type=text] {
+  padding-left: 5px;
+  width: 100%;
+  color: #9c9c9c;
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 36px;
+}
+.bro-form-container .btn {
+  color: #fff;
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 36px;
+}
+.bro-form-file {
+  display: block;
+  text-align: right;
+  position: relative;
+  padding-right: 20px;
+}
+.bro-form-file label {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+.wpcf7-form-control-wrap {
+  position: relative;
+}
+.bro-vacansii .bro-form input[type=file] {
+  text-align: right;
+  margin-top: 15px;
+  display: block;
+  width: 24%;
+  margin-left: auto;
+}
+.bro-form-file input, .bro-form-file>span {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+div.wpcf7-response-output {
+  margin: 2em 0.5em 1em;
+  padding: 0.2em 1em;
+}
+
+.bro-vacansii .bro-form .bro-form-container>span,
+.bro-vacansii .bro-form input[type=submit] {
+  width: 24%;
+  line-height: 22px;
+}
+
+
+@media (max-width:900px) {
+
+  .bro-vacansii .bro-form .bro-form-container>span,
+  .bro-vacansii .bro-form input[type=submit] {
+    width: 100%
+  }
+}
+
+.bro-vacansii .bro-form input[type=email],
+.bro-vacansii .bro-form input[type=tel],
+.bro-vacansii .bro-form input[type=text] {
+  padding-left: 5px;
+  width: 100%;
+  color: #9c9c9c;
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 36px
+}
+
+.bro-vacansii .bro-form input[type=file] {
+  text-align: right;
+  margin-top: 15px;
+  display: block;
+  width: 24%;
+  margin-left: auto
+}
+
+/*end vacansii */
