@@ -433,8 +433,40 @@ Field::make( 'text', 'mission_alt', __( ' "Alt"   изображения' ))->se
             ->add_fields( array(
                 Field::make( 'text',  'skil', __( 'текст' ))
                 ) ),
-
+                Field::make( 'text',  'shortcode', __( 'шорткод contactForm7' )),
          ) ),
 
          ) );
          
+         Container::make("post_meta", "ОФИС МОСКВА")
+ 
+         ->show_on_template("templates/contacts.php")
+         ->add_fields( array(
+                      
+                Field::make( 'textarea',  'adres_office', __( 'АДРЕС' ))->set_width( 33 ),
+                Field::make( 'rich_text',  'contact_office', __( 'ВЫ МОЖЕТЕ СВЯЗАТЬСЯ С НАМИ' ))->set_width( 33 ),
+                Field::make( 'textarea',  'time_work_office', __( 'РЕЖИМ РАБОТЫ' ))->set_width( 33 ),
+                Field::make( 'rich_text',  'requisit', __( 'РЕКВИЗИТЫ' ))->set_width( 50 ),            
+                Field::make( 'textarea',  'iframe_office', __( 'iframe' )) ->set_width( 50 )           
+    
+             ) );
+
+         Container::make("post_meta", "ПРОИЗВОДСТВО")
+ 
+         ->show_on_template("templates/contacts.php")
+         ->add_fields( array(
+                      
+                Field::make( 'textarea',  'adres_production', __( 'АДРЕС' ))->set_width( 33 ),
+                Field::make( 'rich_text',  'contact_production', __( 'ВЫ МОЖЕТЕ СВЯЗАТЬСЯ С НАМИ' ))->set_width( 33 ),
+                Field::make( 'textarea',  'time_work_production', __( 'РЕЖИМ РАБОТЫ' ))->set_width( 33 ),
+                Field::make( 'textarea',  'iframe_production', __( 'iframe' ))       
+            ) );
+
+         Container::make("post_meta", "ДРУГИЕ ГОРОДА")
+ 
+         ->show_on_template("templates/contacts.php")
+         ->add_fields( array(
+                      
+                Field::make( 'textarea',  'adres_other', __( 'АДРЕС' ))->set_width( 100 ),
+   
+            ) );

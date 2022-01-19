@@ -217,12 +217,7 @@ footer .btn {
   max-width: 1030px;
   margin: auto;
 }
-.bro-row {
-  display: flex;
-  width: 95%;
-  justify-content: space-between;
-  margin: 45px auto;
-}
+
 .bro-footer .bro-col:nth-child(1) {
   width: 26%;
 }
@@ -521,13 +516,7 @@ footer .btn {
     color: #5d5d5d;
     text-decoration: none;
   }
-  .bro-row {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    margin: 45px auto;
-    padding: 0 50px;
-  }
+
   .bro-footer .bro-col:nth-child(1) ul li,
   .bro-footer .bro-col:nth-child(2) ul li {
     display: flex;
@@ -3970,3 +3959,129 @@ div.wpcf7-response-output {
 }
 
 /*end vacansii */
+
+
+
+
+/* tabs */
+.tbcnt_button
+{
+    font-size: 0;
+    text-align: center;
+    display: inline-block;
+}
+.tbcnt_but{
+  padding: 5px 25px;
+  cursor: pointer;
+}
+.tbcntb_act{
+  background-color: #4b95dd;
+  color: #fff;
+}
+
+.tbcnt_cnt {
+    display: none;
+    min-height: 470px;
+}
+.tbcntc_act {
+    display: block;
+}
+.tbcnt_cnt_image {
+    float: left;
+    width: 100%;
+    max-width: 395px;
+    padding-top: 10px;
+}
+.tbcnt_cnt_text {
+    float: left;
+    width: 100%;
+    max-width: 688px;
+    text-align: left;
+    padding: 80px 20px 50px 0;
+}
+.bro-contakti .bro-tabs ul:nth-child(1) li.bro--active, .bro-contakti .bro-tabs ul:nth-child(1) li:hover {
+  background-color: #4b95dd;
+  color: #fff;
+}
+.bro-contakti .bro-tabs ul:nth-child(1) li {
+  padding: 5px 25px;
+  cursor: pointer;
+}
+.bro-contakti .bro-tabs ul:nth-child(1) {
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 34px;
+  text-transform: uppercase;
+  color: #000;
+  display: flex;
+  justify-content: flex-start;
+}
+.bro-contakti .bro-tabs ul:nth-child(2) h4 {
+  color: #000;
+  font-family: Helvetica;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 34px;
+  margin-top: 20px;
+}
+.bro-contakti .bro-line {
+  height: 1px;
+  background-color: #000;
+  display: block;
+  width: 100%;
+}
+.bro-contakti .bro-tabs ul:nth-child(2) h5 {
+  color: #000;
+  font-family: Helvetica;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 34px;
+  display: inline-block;
+  text-transform: uppercase;
+  background-color: rgba(216, 216, 216, .4);
+}
+.bro-contakti th, .bro-contakti td {
+  background-color: transparent;
+  
+}
+.bro-contakti .bro-tabs ul:nth-child(2) small {
+  color: #8c8c8c;
+}
+.bro-contakti .bro-tabs ul:nth-child(2) h5 {
+  color: #000;
+  font-family: Helvetica;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 34px;
+  display: inline-block;
+  text-transform: uppercase;
+  background-color: rgba(216, 216, 216, .4);
+}
+.bro-contakti iframe {
+  height: 100%;
+  min-height: 500px;
+  max-width: 100%;
+  width: 100%;
+  border: none !important;
+}
+.bro-contakti strong {
+color: black;
+}
+
+@media (max-width:900px) {
+  .bro-contakti .bro-row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+  }
+
+  .bro-contakti .bro-col06,
+  .bro-contakti .bro-col3 {
+    width: 80%
+  }
+
+
+.bro-contakti .bro-tabs ul:nth-child(1) {
+  flex-direction: column;
+}}

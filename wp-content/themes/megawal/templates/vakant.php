@@ -36,7 +36,7 @@ if(!empty($vakants)){
                         <div class="bro-line"></div>
                         <h3>* Дополнительную информацию узнаете при собеседовании</h3>
                         <div class="bro-form">
-                        '. do_shortcode('[contact-form-7 id="794" title="Vacant"]') .'
+                        '. do_shortcode($item['shortcode']) .'
                         </div>
                         </div>';
                     }
