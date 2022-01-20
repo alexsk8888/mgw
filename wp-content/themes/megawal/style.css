@@ -47,10 +47,7 @@ input, label, textarea {
   padding: 0 15px;
   margin: 0 auto;
 }
-.row {
-  margin-left: -15px;
-  margin-right: -15px;
-}
+
 
 .callback {
   position: relative;
@@ -381,13 +378,25 @@ footer .btn {
     transition: all 0.3s;
     font-family: HelveticaMedium;
   }
+  #primary-menu a:hover,
+  #primary-menu li.active a {
+    background: #4f96da
+  }
+  .calbackheader{
+    padding: 15px 15px !important;
+    margin: 17px 0px 0px -11px;
+  }
+  .callback .fab{
+    font-size: 18px;
+    letter-spacing: 1.3px;
+  }
   .head__logo_text {
     font-family: UniSansHeavyCAPS, Helvetica, Arial, sans-serif;
     display: block;
     font-size: 55px;
-    line-height: 1;
+    line-height: 1.1;
     color: #67376c;
-  }
+}
 
   .bro-logo-text h4 {
     opacity: 0.73;
@@ -412,10 +421,11 @@ footer .btn {
     color: #000;
     font-size: 24px;
     position: relative;
+    line-height: 1.7;
     margin-right: -7px;
     margin-left: -5px;
     padding-left: 43px;
-  }
+}
   header .btn {
     text-transform: none;
     background: linear-gradient(to right, #ffa200 0, #fdd94a 100%) #ffc000;
@@ -678,7 +688,7 @@ footer .btn {
 .owlDotsHBlock {
   height: 50px;
   width: 150px;
-  margin: auto;
+  margin: 0 25%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -804,16 +814,9 @@ form .form-control {
   padding: 10px 0 10px 10px;
   width: 530px;
   height: fit-content;
-  margin-top: 100px;
+  margin: 100px 26px 0 23px;
 }
-/* .offer:before {
-    content: "";
-    position: absolute;
-    width: 547px;
-    height: 467px;
-    bottom: -422px;
-    left: -140px;
-} */
+
 .offer h1 {
   font-size: 59px;
   text-transform: uppercase;
@@ -838,6 +841,10 @@ form .form-control {
   text-align: left;
   line-height: 1;
   color: #fff !important;
+  
+}
+.offer h3, .offer h1 {
+  font-family: RobotoBold, Helvetica, Arial, sans-serif;
 }
 .offer h3 {
   font-size: 24px;
@@ -996,7 +1003,7 @@ form .form-control {
     right: 20px;
   }
 }
-/* ---------------------------------------виды офисных перегородк---------------------------------------- */
+/* ---------------------------------------Ð²Ð¸Ð´Ñ‹ Ð¾Ñ„Ð¸ÑÐ½Ñ‹Ñ… Ð¿ÐµÑ€ÐµÐ³Ð¾Ñ€Ð¾Ð´Ðº---------------------------------------- */
 
 /* ------------------------------------------------------------------------------------------------------------------------ */
 
@@ -1418,7 +1425,7 @@ form .form-control {
     padding: 0;
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-direction: row;
   }
   .about_slider {
@@ -1472,6 +1479,7 @@ form .form-control {
     z-index: 2;
     background: #65366a;
     width: 393px;
+    margin: 0px 0 0 20px;
   }
   .slide img {
     object-fit: cover;
@@ -2177,7 +2185,7 @@ form .form-control {
     padding: 0;
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-direction: row;
   }
   .about_slider {
@@ -2218,7 +2226,7 @@ form .form-control {
     padding: 10px 0 10px 10px;
     width: 320px;
     height: fit-content;
-    margin-top: 100px;
+    margin: 100px 0 0 50px;
   }
   #wpcf7-f82-o1 {
     padding-top: 0px;
@@ -2303,6 +2311,7 @@ form .form-control {
     z-index: 2;
     background: #65366a;
     width: 393px;
+    margin: 0 50px 0 0;
   }
 }
 @media (min-width: 425px) and (max-width: 767px) {

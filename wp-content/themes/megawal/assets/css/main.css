@@ -197,6 +197,9 @@
     height: 60px;
     font-size: 60px;
     cursor: pointer;
+    background-image: url(../image/angle-right-solid.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
   }
   .prev_img_portfolio{
     display: none;
@@ -211,6 +214,10 @@
     height: 60px;
     font-size: 60px;
     cursor: pointer;
+    background-image: url(../image/angle-left-solid.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+
   }
 .next_than_blank{
     display: none;
@@ -225,6 +232,9 @@
     height: 60px;
     font-size: 60px;
     cursor: pointer;
+    background-image: url(../image/angle-right-solid.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
   }
   .prev_than_blank{
     display: none;
@@ -239,6 +249,9 @@
     height: 60px;
     font-size: 60px;
     cursor: pointer;
+    background-image: url(../image/angle-left-solid.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 .sertification {
     display: flex;
