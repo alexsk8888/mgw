@@ -32,7 +32,8 @@
 			<div class="container betwen">
 			<div class="mobile-navigation">
 				<button class="menu-toggle" aria-controls="mobile-menu" aria-expanded="false">
-					<i class="fas fa-bars"></i>
+					<div class="nav-icon2"><span></span> <span></span> <span></span> <span></span> <span></span> <span></span></div>
+
 				</button>
 					<?php
 					wp_nav_menu(
@@ -56,17 +57,14 @@
 			?>
 				</div>
 			</div>
-		</nav><!-- #site-navigation -->.
-		
+		</nav>
 	<header id="masthead" class="site-header">
 
-<header>
 	<div class="container">
 		<div class="row column-e">
 			<div class="col-xs-4">
 				<a href="<?php echo home_url()?>" class="logo">
-					<!--		              <img src="/wp-content/themes/megawal/img/28.01.19/logo.svg" alt="MEGAWALL">--><span class="head__logo_text">MEGAWALL</span> </a>
-				<!--<div class="h1" itemprop="name">Стеклянные офисные перегородки для офисов и ТЦ</div>-->
+					<span class="head__logo_text">MEGAWALL</span> </a>
 				<div class="bro-logo-text">
 					<h4 class="head__logo_text_h4">Все виды остекления</h4>
 					<h5 class="head__logo_text_h5">Перегородки. Фасады. Интерьеры.</h5>
@@ -88,7 +86,7 @@
 					</div>
 						</div>
 						<div class="col-xs-6 text-right">
-							<a href="/wp-content/themes/megawal/popups/modal-callback.html" class="btn btn-yellow" >Заказать обратный звонок</a></div>
+							<a href="/wp-content/themes/megawal/popups/modal-callback.html" class="btn btn-yellow calbackheader" >Заказать обратный звонок</a></div>
 					</div>
 				</div>
 			</div>
@@ -133,8 +131,7 @@ if( $slides ) {
 	 </div> <div class="owlDotsHBlock"></div>';
 	 }
 	 ?>
-	 
-	</header>
+
 		</header><!-- #masthead -->
 
 

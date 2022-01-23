@@ -10,13 +10,15 @@ $post_cb_field = carbon_get_post_meta( $post->ID, 'post_cb_field' );
 echo '</div>';
 if(!empty($post_cb_field)){
     echo ' <div class="post_page_image">
-        <div class="images-boxes">';
+        ';
 $sert_counter=0;
     foreach ( $post_cb_field as $item ): 
         echo'
         <div class="images-box">
-        <div class="close_sert"></div>'
-      
+        <div class="close_sert"></div>
+        <span class="next_img_portfolio dashicons dashicons-arrow-right-alt2"></span>
+        <span class="prev_img_portfolio dashicons dashicons-arrow-left-alt2"></span>
+        '      
          . wp_get_attachment_image($item['image'], 'post-thumbnail', '', array( 'class' => 'one_sert', 'alt' => $item['alt'])). ' 
          <div class="zoom">Увеличить</div>
          </div>';

@@ -4,6 +4,13 @@ use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
 
+Container::make( 'theme_options', __( 'Таймер скидки' ) )
+        ->set_icon('dashicons-backup')
+        ->add_fields( array(
+            Field::make('date_time', 'date_and_time', 'Дата и время')
+        ) );
+
+
 Container::make( 'theme_options', __( 'Сдайдер банера' ) )
     ->set_page_parent( 'themes.php' )
     ->add_fields( array(
@@ -24,8 +31,8 @@ Container::make("post_meta", "Наши преимущества")
     ->show_on_template("templates/front-page.php")
     // video box
     ->add_fields( array(
-
-        Field::make( 'complex', 'enefits_content', 'Блок "плитка"  максимум 20шт' )->set_layout( 'tabbed-horizontal' )->set_max( 20 )
+        Field::make( 'image', 'benefits_backround', __( ' фоновое изображение' ))->set_width( 10 )->set_width( 10 ),
+        Field::make( 'complex', 'enefits_content', 'Блок "плитка"  максимум 20шт' )->set_layout( 'tabbed-horizontal' )->set_max( 20 )->set_width( 90 )
             ->add_fields( array(
                 Field::make( 'image', 'icon', __( ' Иконка' ))->set_width( 10 ),
                 Field::make( 'textarea', 'alt', __( ' "Alt" иконки' ))->set_width( 10 ),
@@ -66,7 +73,8 @@ Container::make("post_meta", "Виды офисных перегородок")
                 Field::make( 'textarea', 'title', __( ' Заголовок кнопки' ))->set_width( 15 ),
                 Field::make( 'image', 'icon', __( ' Фоновое изображение' ) )->set_width( 10 ),
                 Field::make( 'textarea', 'alt', __( ' "Alt" Фонового изображения' ))->set_width( 15 ),
-                Field::make( 'rich_text', 'description', __( ' Описание' ))->set_width( 60 ),
+                Field::make( 'rich_text', 'description', __( ' Описание' ))->set_width( 50 ),
+                Field::make( 'text', 'price', __( ' цена' ))->set_width( 10 ),
             ) ),
 
 
@@ -411,3 +419,55 @@ Field::make( 'text', 'mission_alt', __( ' "Alt"   изображения' ))->se
              Field::make( 'image', 'image', __( ' изображение' ))->set_width( 10 ),
              Field::make( 'textarea', 'alt', __( ' "Alt" иконки' ))->set_width( 10 ))),
          ) );
+
+
+     Container::make("post_meta", "Вакансии")
+ 
+     ->show_on_template("templates/vakant.php")
+     ->add_fields( array(
+     
+         Field::make( 'complex', 'vakants', 'Одна вакансия' )->set_layout( 'tabbed-vertical' )->set_max( 20 )
+         ->add_fields( array(
+            Field::make( 'text',  'prof', __( 'Должность' ))->set_required(true),
+            Field::make( 'text',  'zp', __( 'средняя з/п' )),
+            Field::make( 'complex', 'skils', '.. должен знать и уметь:' )->set_layout( 'tabbed-vertical' )->set_max( 20 )
+            ->add_fields( array(
+                Field::make( 'text',  'skil', __( 'текст' ))
+                ) ),
+                Field::make( 'text',  'shortcode', __( 'шорткод contactForm7' )),
+         ) ),
+
+         ) );
+         
+         Container::make("post_meta", "ОФИС МОСКВА")
+ 
+         ->show_on_template("templates/contacts.php")
+         ->add_fields( array(
+                      
+                Field::make( 'textarea',  'adres_office', __( 'АДРЕС' ))->set_width( 33 ),
+                Field::make( 'rich_text',  'contact_office', __( 'ВЫ МОЖЕТЕ СВЯЗАТЬСЯ С НАМИ' ))->set_width( 33 ),
+                Field::make( 'textarea',  'time_work_office', __( 'РЕЖИМ РАБОТЫ' ))->set_width( 33 ),
+                Field::make( 'rich_text',  'requisit', __( 'РЕКВИЗИТЫ' ))->set_width( 50 ),            
+                Field::make( 'textarea',  'iframe_office', __( 'iframe' )) ->set_width( 50 )           
+    
+             ) );
+
+         Container::make("post_meta", "ПРОИЗВОДСТВО")
+ 
+         ->show_on_template("templates/contacts.php")
+         ->add_fields( array(
+                      
+                Field::make( 'textarea',  'adres_production', __( 'АДРЕС' ))->set_width( 33 ),
+                Field::make( 'rich_text',  'contact_production', __( 'ВЫ МОЖЕТЕ СВЯЗАТЬСЯ С НАМИ' ))->set_width( 33 ),
+                Field::make( 'textarea',  'time_work_production', __( 'РЕЖИМ РАБОТЫ' ))->set_width( 33 ),
+                Field::make( 'textarea',  'iframe_production', __( 'iframe' ))       
+            ) );
+
+         Container::make("post_meta", "ДРУГИЕ ГОРОДА")
+ 
+         ->show_on_template("templates/contacts.php")
+         ->add_fields( array(
+                      
+                Field::make( 'textarea',  'adres_other', __( 'АДРЕС' ))->set_width( 100 ),
+   
+            ) );

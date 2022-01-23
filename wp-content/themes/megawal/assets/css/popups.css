@@ -34,10 +34,12 @@
     align-items: center;
   }
   .images-box_active {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: fit-content;
     height: 100vh;
-    position: fixed;
-    top: 0;
     z-index: 1000;
     display: flex;
     flex-direction: column;
@@ -109,7 +111,10 @@
       object-fit: contain;
   }
   .than_blank_box {
-      margin: auto;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
       width: fit-content;
       height: 100vh;
       display: flex;
