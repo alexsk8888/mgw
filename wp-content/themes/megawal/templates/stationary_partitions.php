@@ -49,7 +49,7 @@ $new_banner_title = $span_content;
             <div class="block_info">
                 <?php
                 if(!empty($first_block[0]['info_text'])){
-                    echo $first_block[0]['info_text'];
+                    echo wpautop($first_block[0]['info_text']);
                 }
                 ?>
             </div>
@@ -67,7 +67,7 @@ $new_banner_title = $span_content;
             if(!empty($second_block_list)){
                 foreach ($second_block_list as $list){
                     if(!empty($list)){
-                        echo '<li><div class="bro-bg"></div>' . $list['li_text'] . '</li>';
+                        echo '<li><div class="bro-bg"></div>' . wpautop($list['li_text'] ). '</li>';
                     }
                 }
             }
@@ -89,9 +89,9 @@ $new_banner_title = $span_content;
             if(!empty($type_partitions)){
                 foreach ($type_partitions as $type){ ?>
                     <div class="single_type">
-                        <div class="type_name"><?php echo $type['info_text']?></div>
+                        <div class="type_name"><?php echo wpautop($type['info_text'])?></div>
                         <div class="type_img" style="background-image: url(<?php echo wp_get_attachment_image_url($type['photo']); ?> );"></div>
-                        <div class="type_price"><?php echo $type['price']?></div>
+                        <div class="type_price"><?php echo wpautop($type['price'])?></div>
                         <div class="type_button">
                             <button class="btn">Рассчитать стоимость</button>
                         </div>
@@ -117,9 +117,9 @@ $new_banner_title = $span_content;
                 if(!empty($stnr_door_type)){
                     foreach ($stnr_door_type as $type){ ?>
                         <div class="single_type">
-                            <div class="type_name"><?php echo $type['info_text']?></div>
+                            <div class="type_name"><?php echo wpautop($type['info_text'])?></div>
                             <div class="type_img" style="background-image: url(<?php echo wp_get_attachment_image_url($type['photo']); ?> );"></div>
-                            <div class="type_price"><?php echo $type['price']?></div>
+                            <div class="type_price"><?php echo wpautop($type['price'])?></div>
                             <div class="type_button">
                                 <button class="btn">Рассчитать стоимость</button>
                             </div>
@@ -150,7 +150,7 @@ $new_banner_title = $span_content;
         if(!empty($slide_item)){
             $num++;
             echo "<div id='".$slide_item['id']."' class='slider_item'> 
-                 <div class='slider_description'>" . $slide_item['description'] . "</div> 
+                 <div class='slider_description'>" . wpautop($slide_item['description']) . "</div> 
                  <div class='slider_photo'>"; // start slider_photo
             foreach ( $slide_item['slider_projects_item'] as $item){
                 echo  wp_get_attachment_image( $item['photo'],
@@ -208,7 +208,7 @@ $new_banner_title = $span_content;
                 foreach ($services_slider as $service){
                     if(!empty($service)){
                         echo "<div class='service'>
-                                <div class='srv_title'>". $service['text'] ."</div>
+                                <div class='srv_title'>". wpautop($service['text']) ."</div>
                                 <div class='srv_img' style='background-image: url(".wp_get_attachment_image_url($service['photo']) ." )'></div>
                               </div>";
                     }

@@ -84,7 +84,7 @@
 }
 #products .single_product .product_description h3 {
   color: #4b95dd;
-  font-family: Helvetica;
+  font-family: Helvetica, sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 24px;
@@ -92,9 +92,15 @@
   margin-top: 0;
   margin-bottom: 20px;
 }
+#products .single_product .product_description h3 a {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
 #products .single_product .product_description p {
   color: #000;
-  font-family: Helvetica;
+  font-family: Helvetica, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
