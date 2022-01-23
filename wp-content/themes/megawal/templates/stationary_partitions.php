@@ -6,6 +6,7 @@ Template Name: Stationary partitions
 get_header();
 $background_img = carbon_get_post_meta($post->ID, 'background_img' );
 $banner_title = carbon_get_post_meta($post->ID, 'banner_title' );
+$banner_price = carbon_get_post_meta($post->ID, 'stnr_banner_price' );
 
 $contents = explode(' ', $banner_title);
 $i = 0;
@@ -22,9 +23,9 @@ $new_banner_title = $span_content;
       if(!empty($banner_title)){ echo '<h2>'.$new_banner_title.'</h2>'; }
       echo '<div class="section_form">
               <div class="bro-sfirst-formtext">
-                 <strong>Смета</strong> за 10 минут.<br> 
-                 <strong>Монтаж</strong> от 3х дней.<br> 
-                 <strong>Цена</strong> от 1900 руб за кв.м</div>
+                 <strong>Смета </strong>' .$banner_price[0]['price'].'<br> 
+                 <strong>Монтаж </strong>' .$banner_price[1]['price'].'<br> 
+                 <strong>Цена </strong>' .$banner_price[2]['price'].'</div>
               <div class="form-heading">
                 <p>Оставьте заявку на бесплатный расчет стоимости </p>
               </div>'
