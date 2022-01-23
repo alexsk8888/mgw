@@ -56,6 +56,7 @@ $(document).ready(function(){
         nav: true,
         lazyLoad: true,
         dotsContainer: "#icons_projects",
+        dotsSpeed: 10,
         rewind: true,
         autoplay: true,
         loop:"true"
