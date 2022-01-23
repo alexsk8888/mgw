@@ -42,8 +42,17 @@ $(document).ready(function () {
     navContainer: ".navBtnCarousel",
     dotsContainer: ".owlDotsHBlock",
 
-    autoplay: true,
-    loop: "true",
+    main_carousel_projects.find(".owl-carousel").owlCarousel({
+        items:1,
+        dots: true,
+        nav: true,
+        lazyLoad: true,
+        dotsContainer: "#icons_projects",
+        dotsSpeed: 10,
+        rewind: true,
+        autoplay: true,
+        loop:"true"
+    });
   });
 
   main_carousel_projects.find(".owl-carousel").owlCarousel({
