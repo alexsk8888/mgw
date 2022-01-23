@@ -46,39 +46,32 @@
     }
 }
 
-/* first clean */
-.first_clean {
-    min-height: 615px;
-    height: fit-content;
-    position: relative;
-    z-index: 1;
-    -webkit-transform-origin: left center;
-    transform-origin: left center;
-    margin: 0 0px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.clean_text{
-    /* width: auto !important; */
-}
 
+.clean_text .btn--icon-check:before{
+display: none;
+}
+.clean_text .btn--icon-check {
+    position: relative;
+    padding: 10px 43px !important;
+    border-radius: 25px !important;
+    color: #fffefe;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+}
 
 /* tabs */
 
 .about {
     padding-top: 20px;
     background: #edf0fc;
+    width: 100%;
 }
-
-
-
-
-
-
-
+.about hr
+{
+      margin: 20px auto;
+      border: 0;
+      border-top: 1px solid #ffffff;
+      max-width: 1230px;
+}
 
 .about_slider .owl-stage{
     padding-top: 5px;
@@ -118,17 +111,27 @@
 
 
 
-
-.direction, .family {
+.direction {
     background: #fff;
     display: flex;
     text-align: center;
-    /* width: 1423px; */
-    padding: 30px;
+    max-width: 1230px;
     margin: 20px auto;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.family {
+    display: flex;
+    max-width: 1230px;
+    padding: 30px;
+    margin: 20px auto;
+    flex-direction: column;
+    justify-content: center;
+    color: #000;
+    font-family: HelveticaRegular;
+    font-size: 18px;
 }
 
 .direction h4 {
@@ -142,19 +145,18 @@
 .direction ul {
     display: inline-block;
     width: 100%;
-    margin-bottom: 20px;
     text-align: center;
-    padding-left: 40px;
-    padding-right: 40px;
     max-width: 85%;
 }
 .direction li {
     display: inline;
     list-style-type: disc;
     font-weight: bold;
-    line-height: 1.8;
+    /* line-height: 1.8; */
     position: relative;
     margin-right: 20px;
+    font-family: HelveticaRegular;
+    font-size: 18px;
 }
 
 .direction li:before {
@@ -188,7 +190,7 @@
     display: none;
     z-index: 9999;
     position: fixed;
-    left: 70%;
+    left: 95%;
     top: 50%;
     transform: translate(-50%, -50%);
     text-shadow: 0px 0px 16px black;
@@ -205,7 +207,7 @@
     display: none;
     z-index: 9999;
     position: fixed;
-    left: 30%;
+    left: 7%;
     top: 50%;
     transform: translate(-50%, -50%);
     text-shadow: 0px 0px 16px black;
@@ -217,13 +219,12 @@
     background-image: url(../image/angle-left-solid.svg);
     background-repeat: no-repeat;
     background-size: contain;
-
   }
 .next_than_blank{
     display: none;
     z-index: 9999;
     position: fixed;
-    left: 95%;
+    left: 100%;
     top: 50%;
     transform: translate(-50%, -50%);
     text-shadow: 0px 0px 16px black;
@@ -240,7 +241,7 @@
     display: none;
     z-index: 9999;
     position: fixed;
-    left: 5%;
+    left: 8%;
     top: 50%;
     transform: translate(-50%, -50%);
     text-shadow: 0px 0px 16px black;
@@ -258,6 +259,8 @@
     flex-direction: column;
     align-items: center;
     padding: 30px;
+    max-width: 1230px;
+    width: 100%;
 }
 .sertification img {
     width: 183px;
@@ -280,6 +283,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 .count_title {
     color: #fdbf2d;
@@ -316,6 +320,7 @@
   border-radius: 50px;
   color: white;
   text-shadow: 0px 0px 13px black;
+  padding: 10px 5px;
 }
 .wpcf7-spinner {
   position: absolute !important;

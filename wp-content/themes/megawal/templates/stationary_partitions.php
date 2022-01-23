@@ -33,7 +33,7 @@ $new_banner_title = $span_content;
     ?>
 </div>
 
-<main  class="site-main">
+<main  class="site-main stationatu_page">
     <div class="container">
         <?php
         $first_block = carbon_get_post_meta($post->ID, 'stnr_block_first');

@@ -31,8 +31,8 @@ Container::make("post_meta", "Наши преимущества")
     ->show_on_template("templates/front-page.php")
     // video box
     ->add_fields( array(
-
-        Field::make( 'complex', 'enefits_content', 'Блок "плитка"  максимум 20шт' )->set_layout( 'tabbed-horizontal' )->set_max( 20 )
+        Field::make( 'image', 'benefits_backround', __( ' фоновое изображение' ))->set_width( 10 )->set_width( 10 ),
+        Field::make( 'complex', 'enefits_content', 'Блок "плитка"  максимум 20шт' )->set_layout( 'tabbed-horizontal' )->set_max( 20 )->set_width( 90 )
             ->add_fields( array(
                 Field::make( 'image', 'icon', __( ' Иконка' ))->set_width( 10 ),
                 Field::make( 'textarea', 'alt', __( ' "Alt" иконки' ))->set_width( 10 ),
@@ -73,7 +73,8 @@ Container::make("post_meta", "Виды офисных перегородок")
                 Field::make( 'textarea', 'title', __( ' Заголовок кнопки' ))->set_width( 15 ),
                 Field::make( 'image', 'icon', __( ' Фоновое изображение' ) )->set_width( 10 ),
                 Field::make( 'textarea', 'alt', __( ' "Alt" Фонового изображения' ))->set_width( 15 ),
-                Field::make( 'rich_text', 'description', __( ' Описание' ))->set_width( 60 ),
+                Field::make( 'rich_text', 'description', __( ' Описание' ))->set_width( 50 ),
+                Field::make( 'text', 'price', __( ' цена' ))->set_width( 10 ),
             ) ),
 
 

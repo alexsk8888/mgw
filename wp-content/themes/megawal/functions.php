@@ -12,7 +12,7 @@ function theme_register_nav_menu() {
 	register_nav_menu( 'footer-product', 'footer-product Меню' );
 	register_nav_menu( 'mobile', 'mobile Меню' );
 }
-
+add_image_size( 'vids-mini', 415, 600, true );
 
 /** 
  * Add Carbon Fields 

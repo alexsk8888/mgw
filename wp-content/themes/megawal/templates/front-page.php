@@ -11,21 +11,7 @@ Template Name: Main page
      
   
 
-<div class="benefits">
-         <?php
 
-         $data_arr = carbon_get_post_meta( $post->ID, 'enefits_content' );
-         if ( ! empty( $data_arr ) ):
-         foreach ( $data_arr as $cnt => $item ): 
-            	echo '<div class="bro_item"><div id="diamond"></div>'.
-		 wp_get_attachment_image( $item['icon'], 'post-thumbnail', true, array( 'alt' => $item['alt'],))
-          .'<span class="bro_item_h2">' . 
-           $item['title'] .
-          '</span><p>' . $item['description']. '</p></div>';
-
-            endforeach;
-    endif;
-?></div>
 
 <!--  Выполненные проекты -->
 
@@ -33,7 +19,7 @@ Template Name: Main page
  $slider_projects = carbon_get_post_meta( $post->ID, 'slider_projects' );
  $main_photo_projects = carbon_get_post_meta( $post->ID, 'main_photo_projects' );
  $num = 0;
-
+ echo '<h2 class="partners_h2">' . blue_title(__("Выполненные проекты")) . '</h2><div class="partners_all ">';
  echo "<div id='projects'>";
 echo   "<div class='projects_info'>
           <div id='main_carousel_projects'>
@@ -64,8 +50,25 @@ echo   "<div class='projects_info'>
      }
  }
    echo "</div></div></div>";
+ $benefits_backround = carbon_get_post_meta( $post->ID, 'benefits_backround' );
+ echo '
+<div class="benefits" style="background-image: url(' .
+ wp_get_attachment_image_url( $benefits_backround, 'full' ) .
+  ')"><div class="cntbox">';
+         
 
-?>
+         $data_arr = carbon_get_post_meta( $post->ID, 'enefits_content' );
+         if ( ! empty( $data_arr ) ):
+         foreach ( $data_arr as $cnt => $item ): 
+            	echo '<div class="bro_item"><div id="diamond"></div>'.
+		 wp_get_attachment_image( $item['icon'], 'post-thumbnail', true, array( 'alt' => $item['alt'],))
+          .'<span class="bro_item_h2">' . 
+           $item['title'] .
+          '</span><p>' . $item['description']. '</p></div>';
+
+            endforeach;
+    endif;
+?></div></div>
 <!-- Наши заказчики и партнеры -->
 <div class="parthners">
 <?php
@@ -120,13 +123,19 @@ echo '<div class="partition_tabs">
                     echo  
                     '<div class="partition__pane partition__pane_show" id="content-'. $tabcount++ .'" >' .
                     wp_get_attachment_image( $item['icon'], 'post-thumbnail', true, array( 'alt' => $item['alt'])) .
-                    '<div class="partition_description">' . $item['description'] . '</div>
+                    '<div class="partition_description">
+                    <div class="partition_description_cnt">' . $item['description'] . '</div>
+                    <strong>' .  $item['price'] . '</strong>
+                    </div>                    
                     </div>';
                 }else{                
                 echo  
                     '<div class="partition__pane" id="content-'. $tabcount++ .'">' .
                     wp_get_attachment_image( $item['icon'], 'post-thumbnail', true, array( 'alt' => $item['alt'])) .
-                    '<div class="partition_description">' .  $item['description'] . '</div>
+                    '<div class="partition_description">                    
+                    <div class="partition_description_cnt">' . $item['description'] . '</div>
+                    <strong>' .  $item['price'] . '</strong>
+                    </div>
                     </div>';
                 }
             endforeach;
@@ -135,12 +144,13 @@ echo '<div class="partition_tabs">
                 </div>
                     <div class="right_block_buttons">
                         <div class="types-content-item__controls office_buttons"> 
-                            <a href="" class="btn btn-sm btn-yellow btn--icon-ruler topopup fancybox.ajax">Вызвать замерщика </a> 
-                            <a href="" class="btn btn-sm btn-yellow btn--icon-check topopup fancybox.ajax">Рассчитать стоимость</a>
+                            <a href="" class="btn btn-se btn-yellow btn--icon-ruler topopup fancybox.ajax">Вызвать замерщика </a> 
+                            <a href="" class="btn btn-se btn-yellow btn--icon-check topopup fancybox.ajax">Рассчитать стоимость</a>
                         </div>
                     </div>       
        </div>';
  $first_clean_background = carbon_get_post_meta( $post->ID, 'first_clean_background' );
+
 
  if(!empty($first_clean_background)){
  echo '<div class="first_clean" style="background-image: url(' .
@@ -198,7 +208,7 @@ foreach ( $tabs as  $item ):
 echo ' 
   <li class="tb_cnt '.$tbc_act.' ">
   <div class="tb_cnt_image">'
-  . wp_get_attachment_image($item['view_icon'], 'post-thumbnail', '', array( 'alt' => $item['view_alt']))
+  . wp_get_attachment_image($item['view_icon'], 'vids-mini', '', array( 'alt' => $item['view_alt']))
   . '</div>
   <div class="tb_cnt_text">'.$item['view_description'].'</div>
   </li>';
@@ -221,6 +231,7 @@ echo
     <div class="direction">'.carbon_get_post_meta($post->ID, 'about_direction').'</div>
     <div class="family">'.carbon_get_post_meta($post->ID, 'about_family').'</div>
     
+    <hr>
 
     <div class="mission">
         <div class="mission_text">'. carbon_get_post_meta(get_the_ID(), 'about_mission') .'</div>';
