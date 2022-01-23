@@ -49,7 +49,7 @@ $new_banner_title = $span_content;
             <div class="block_info">
                 <?php
                 if(!empty($first_block[0]['info_text'])){
-                    echo $first_block[0]['info_text'];
+                    echo wpautop($first_block[0]['info_text']);
                 }
                 ?>
             </div>

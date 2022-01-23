@@ -19,8 +19,13 @@ $sert_counter=0;
         <span class="next_img_portfolio dashicons dashicons-arrow-right-alt2"></span>
         <span class="prev_img_portfolio dashicons dashicons-arrow-left-alt2"></span>
         '      
-         . wp_get_attachment_image($item['image'], 'post-thumbnail', '', array( 'class' => 'one_sert', 'alt' => $item['alt'])). ' 
-         <div class="zoom">Увеличить</div>
+         . wp_get_attachment_image($item['image'], 'post-thumbnail', '', array( 'class' => 'one_sert', 'alt' => $item['alt']));
+         
+         if($item['image']){
+             echo ' 
+         <div class="zoom">Увеличить</div>';
+        }
+        echo'
          </div>';
      
     endforeach;

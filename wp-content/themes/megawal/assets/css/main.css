@@ -179,6 +179,7 @@ display: none;
     align-items: center;
     padding: 30px;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 .one_sert {
     object-fit:cover;
@@ -199,9 +200,12 @@ display: none;
     height: 60px;
     font-size: 60px;
     cursor: pointer;
-    background-image: url(../image/angle-right-solid.svg);
+    /* background-image: url(../image/angle-right-solid.svg); */
     background-repeat: no-repeat;
     background-size: contain;
+  }
+  .single-post .prev_img_portfolio{
+    background-image:none;
   }
   .prev_img_portfolio{
     display: none;
