@@ -101,6 +101,7 @@
   height: auto;
   gap: 20px;
   margin-top: 80px;
+  font-size: 22px;
 }
 .stnr_prn_first .block_img {
   height: auto;
@@ -136,6 +137,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding: 50px 250px;
+  font-family: Helvetica, sans-serif;
+  font-size: 22px;
 }
 .stnr_prn_second h2 {
   margin-top: 40px;
@@ -231,7 +234,7 @@
   z-index: 3;
 }
 
-.stationatu_page strong{
+.stationatu_page strong {
   color: #4b94dc;
   font-weight: 700;
 }
