@@ -273,6 +273,7 @@
 .stnr_type .type-list,
 .stnr_door_type .type-list,
 .projects .type-list {
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
