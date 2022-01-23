@@ -29,7 +29,7 @@ echo   "<div class='projects_info'>
      if(!empty($slide_item)){
      $num++;
      echo "<div id='".$slide_item['id']."' class='slider_item'> 
-                 <div class='slider_description'>" . $slide_item['description'] . "</div> 
+                 <div class='slider_description'>" . wpautop($slide_item['description']) . "</div> 
                  <div class='slider_photo'>"; // start slider_photo
                  foreach ( $slide_item['slider_projects_item'] as $item){
                         echo  wp_get_attachment_image( $item['photo'],

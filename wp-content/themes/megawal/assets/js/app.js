@@ -41,21 +41,23 @@ $(document).ready(function () {
     lazyLoad: true,
     navContainer: ".navBtnCarousel",
     dotsContainer: ".owlDotsHBlock",
-
     autoplay: true,
-    loop: "true",
+    loop:"true"
   });
 
-  main_carousel_projects.find(".owl-carousel").owlCarousel({
-    items: 1,
-    dots: true,
-    nav: true,
-    lazyLoad: true,
-    dotsContainer: "#icons_projects",
-    rewind: true,
-    autoplay: true,
-    loop: "true",
-  });
+    main_carousel_projects.find(".owl-carousel").owlCarousel({
+        items:1,
+        dots: true,
+        nav: true,
+        lazyLoad: true,
+        dotsContainer: "#icons_projects",
+        smartSpeed: 500,
+        dotsSpeed: 10,
+        rewind: true,
+        autoplay: true,
+        loop:"true"
+    });
+
 });
 $(".thumb").click(function () {
   $(".owl-carousel").trigger("to.owl.carousel", [$(this).index(), 500]);

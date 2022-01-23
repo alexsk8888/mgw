@@ -41,10 +41,10 @@ foreach($products as $product){
                     }
 
             echo '</div>
-                 <div class="product_description even">'. $product['product_description'].'</div>';
+                 <div class="product_description even">'. wpautop($product['product_description']).'</div>';
 
         }else{
-           echo '<div class="product_description odd">'. $product['product_description'].'</div>';
+           echo '<div class="product_description odd">'. wpautop($product['product_description']).'</div>';
             echo '<div class="product_photo odd">
                     <div class="absolute">'. $block_photo .'</div>';
                     if(!empty($product['links_to_page'])){
