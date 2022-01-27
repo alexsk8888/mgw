@@ -474,3 +474,34 @@ Field::make( 'text', 'mission_alt', __( ' "Alt"   изображения' ))->se
                 Field::make( 'textarea',  'adres_other', __( 'АДРЕС' ))->set_width( 100 ),
    
             ) );
+
+            Container::make("post_meta", "Клеинты и отзывы")
+ 
+            ->show_on_template("templates/feedback_page.php")
+            ->add_fields( array(
+                   Field::make( 'complex', 'feedback', 'Блок "плитка"  максимум 50шт' )->set_layout( 'tabbed-horizontal' )->set_max( 50 )
+               ->add_fields( array(      
+                   Field::make( 'text',  'name', __( 'Название/имя клиента' ))->set_width( 30 )->set_required(true),
+                   Field::make( 'textarea',  'feedback_text', __( 'отзыв' ))->set_width( 30 ),
+                   Field::make( 'image', 'image_viol', __( ' логотип violet' ))->set_width( 10 )->set_required(true),
+                   Field::make( 'textarea', 'alt_viol', __( ' "Alt" violet иконки' ))->set_width( 10 ),
+                   Field::make( 'image', 'image', __( ' логотип цветной' ))->set_width( 10 )->set_required(true),
+                   Field::make( 'textarea', 'alt', __( ' "Alt" иконки' ))->set_width( 10 )
+               ) )
+               ) );
+            Container::make("post_meta", "Благодарственные письма")
+ 
+            ->show_on_template("templates/feedback_page.php")
+            ->add_fields( array(
+                   Field::make( 'complex', 'pasibki', 'Блоки, максимум 20шт' )->set_layout( 'tabbed-horizontal' )->set_max( 20 )
+               ->add_fields( array( 
+                   Field::make( 'rich_text', 'text_sps', __( ' Описание' ))->set_width( 60 ),
+                   Field::make( 'image', 'image_sps', __( ' Изображение' ))->set_width( 20 )->set_required(true),
+                   Field::make( 'text', 'alt_sps', __( ' "Alt" изображения' ))->set_width( 20 ),
+               ) )
+               ) );
+
+
+         
+              
+      

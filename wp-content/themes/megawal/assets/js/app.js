@@ -466,3 +466,64 @@ cnt.forEach(function(item) {
 item.classList.remove('tbcntc_act')
 })
 }
+
+
+$('.bro-klientiionzivi-logo-center').hide();
+let openindex = -1;
+$(document).on('click', '.bro-klientiionzivi-logo li', function(e) {
+  let cur = e.currentTarget;
+  let index = $(cur)
+    .parent()
+    .children()
+    .index(cur);
+  let indexokr = Math.ceil((index + 1) / 4) * 4 - 1;
+  //$(".bro-klientiionzivi-logo-center").show();
+  let h4 = $(cur).attr('data-h4');
+  let p = $(cur).attr('data-p');
+  let img = $(cur).attr('data-img');
+  $('.bro-klientiionzivi-logo-center').slideUp(400, function() {
+    if (openindex == index) {
+      openindex == index;
+      return;
+    }
+    openindex = index;
+    $(cur)
+      .parent()
+      .find('li')
+      .eq(indexokr)
+      .after($('.bro-klientiionzivi-logo-center'));
+    $('.bro-klientiionzivi-logo-center')
+      .find('h4')
+      .html(h4);
+    $('.bro-klientiionzivi-logo-center')
+      .find('p')
+      .html(p);
+    $('.bro-klientiionzivi-logo-center')
+      .find('img')
+      .attr('src', img);
+    $('.bro-klientiionzivi-logo-center').slideDown(400, function() {});
+  });
+});
+
+$(document).ready(function() {
+  $('.nav-icon1,.nav-icon2,.nav-icon3,.nav-icon4').click(function() {
+    $('body').toggleClass('bromodal-open');
+    $('html').toggleClass('bromodal-open');
+    $('.nav-icon2').toggleClass('open');
+    $('.bro-menufullpage').toggleClass('bro--open');
+  });
+});
+$(document).mouseup(function(e) {
+  // событие клика по веб-документу
+  var div = $(
+    '.js-scrollpage-menu>ul,#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4',
+  ); // тут указываем ID элемента
+  //console.log(div.has(e.target).length);
+  if (
+    !div.is(e.target) && // если клик был не по нашему блоку
+    div.has(e.target).length === 0
+  ) {
+    // и не по его дочерним элементам
+    $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').removeClass('open');
+  }
+});

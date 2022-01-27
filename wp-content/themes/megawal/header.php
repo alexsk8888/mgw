@@ -32,18 +32,44 @@
 			<div class="container betwen">
 			<div class="mobile-navigation">
 				<button class="menu-toggle" aria-controls="mobile-menu" aria-expanded="false">
-					<div class="nav-icon2"><span></span> <span></span> <span></span> <span></span> <span></span> <span></span></div>
-
+					<div class="nav-icon2"><span></span> <span></span> <span></span></div>
 				</button>
-					<?php
+
+	
+				<div class="bro-menufullpage ">
+<div class="bro-container">
+<div class="nav-icon2 open"><i class="fas fa-times"></i></div>
+   <div class="bro-menufullpage-logo">
+      <a href="/" class="bro-logo logo"><img src="/wp-content/themes/megawal/assets/image/logo.svg" alt="MEGAWALL"></a>
+      <div class="bro-logo-text">
+         <h4>Все виды остекления</h4>
+         <h5>Перегородки. Фасады. Интерьеры.</h5>
+      </div>
+   </div>
+
+      <?php
 					wp_nav_menu(
 						array(
 							'theme_location' => 'mobile',
 							'menu_id'        => 'mobile-menu',
+							'container' => 'false',
+							'menu_class' => 'bro-menufullpage-menu'
 						)
 					);
-					
 			?>
+
+   <div class="bro-soci">
+      <ul>
+         <li><a target="_blank" href="https://vk.com/megawall_ru"><i class="fab fa-vk" aria-hidden="true"></i></a></li>
+         <li><a target="_blank" href="https://www.facebook.com/megawall.ru/"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+         <li><a target="_blank" href="https://www.instagram.com/megawallmsk/"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+         <li><a target="_blank" href="https://ok.ru/group/53371602468952"><i class="fab fa-odnoklassniki" aria-hidden="true"></i></a></li>
+         <li><a target="_blank" href="https://plus.google.com/114530243530937573473"><i class="fab fa-google" aria-hidden="true"></i></a></li>
+         <li><a target="_blank" href="https://twitter.com/megawallru"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+      </ul>
+   </div>
+</div>
+</div>
 			</div>
 			<div class="primary-navigation">
 			<?php
@@ -134,5 +160,3 @@ if( $slides ) {
 
 		</header><!-- #masthead -->
 
-
-	
