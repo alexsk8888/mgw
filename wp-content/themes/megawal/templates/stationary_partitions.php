@@ -26,8 +26,8 @@ $new_banner_title = $span_content;
               <div class="bro-sfirst-formtext">
                  <strong>Смета </strong>' .$banner_price[0]['price'].'<br> 
                  <strong>Монтаж </strong>' .$banner_price[1]['price'].'<br>';
-                  if($stnr_price_discount){
-                      echo $stnr_price_discount;
+                  if(!empty($stnr_price_discount)){
+                      echo '<div class="f_row align-items">'. $stnr_price_discount .'</div>';
                   }
       echo       '<strong>Цена </strong>' .$banner_price[2]['price'].'</div>
               <div class="form-heading">
