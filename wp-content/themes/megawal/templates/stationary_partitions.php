@@ -7,6 +7,7 @@ get_header();
 $background_img = carbon_get_post_meta($post->ID, 'background_img' );
 $banner_title = carbon_get_post_meta($post->ID, 'banner_title' );
 $banner_price = carbon_get_post_meta($post->ID, 'stnr_banner_price' );
+$stnr_price_discount = carbon_get_post_meta($post->ID, 'stnr_price_discount' );
 
 $contents = explode(' ', $banner_title);
 $i = 0;
@@ -24,8 +25,11 @@ $new_banner_title = $span_content;
       echo '<div class="section_form">
               <div class="bro-sfirst-formtext">
                  <strong>Смета </strong>' .$banner_price[0]['price'].'<br> 
-                 <strong>Монтаж </strong>' .$banner_price[1]['price'].'<br> 
-                 <strong>Цена </strong>' .$banner_price[2]['price'].'</div>
+                 <strong>Монтаж </strong>' .$banner_price[1]['price'].'<br>';
+                  if(!empty($stnr_price_discount)){
+                      echo '<div class="f_row align-items">'. $stnr_price_discount .'</div>';
+                  }
+      echo       '<strong>Цена </strong>' .$banner_price[2]['price'].'</div>
               <div class="form-heading">
                 <p>Оставьте заявку на бесплатный расчет стоимости </p>
               </div>'

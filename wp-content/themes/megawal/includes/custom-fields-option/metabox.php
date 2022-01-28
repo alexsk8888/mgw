@@ -250,6 +250,7 @@ Container::make("post_meta", "Баннер стеклянных перегоро
     ->add_fields( array(
         Field::make( 'image', 'background_img', __( ' Фоновое изображение' ) )->set_width( 30 ),
         Field::make( 'text', 'banner_title', __( ' Заголовок блока' ))->set_width( 40 ),
+        Field::make( 'rich_text', 'stnr_price_discount', __( 'Скидка' ))->set_width( 100 ),
         Field::make( 'complex', 'stnr_banner_price', 'Первый блок' )->set_layout( 'tabbed-horizontal' )->set_max(3)->set_width( 30 )
             ->add_fields( array(
                 Field::make( 'text', 'price', __( ' "Цена' )))),

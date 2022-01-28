@@ -158,6 +158,11 @@
   flex-wrap: nowrap;
 }
 
+.align-items {
+  align-items: center;
+  justify-content: center;
+}
+
 @media only screen and (max-width: 1300px) {
   :root {
     --slider_width: 1000px;
