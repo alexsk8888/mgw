@@ -59,6 +59,11 @@ $new_banner_title = $span_content;
                 ?>
             </div>
         </div>
+          <?php
+          if(!empty($first_block[0]['info_text2'])){
+          echo   '<div class="stnr_prn_first"><div class="block_info">'.  wpautop($first_block[0]['info_text2']) .'</div></div>';
+          }
+        ?>
     </div>
     <?php
     $second_block = carbon_get_post_meta($post->ID, 'stnr_block_second');

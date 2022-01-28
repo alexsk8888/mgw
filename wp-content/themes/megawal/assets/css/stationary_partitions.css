@@ -100,8 +100,11 @@
   width: 100%;
   height: auto;
   gap: 20px;
-  margin-top: 80px;
+  margin-top: 20px;
   font-size: 22px;
+}
+.stnr_prn_first:first-child {
+  margin-top: 80px;
 }
 .stnr_prn_first .block_img {
   height: auto;
