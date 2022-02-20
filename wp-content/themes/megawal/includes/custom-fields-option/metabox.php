@@ -263,9 +263,12 @@ Container::make("post_meta", "Стационарные перегородки")
 
         Field::make( 'complex', 'stnr_block_first', 'Первый блок' )->set_layout( 'tabbed-horizontal' )->set_max(1)
             ->add_fields( array(
-                Field::make( 'image', 'photo', __( ' Изображение' ))->set_width( 50 ),
-                Field::make( 'text', 'alt', __( ' "Alt" иконки' ))->set_width( 50 ),
-                Field::make( 'rich_text', 'info_text', __( ' Информационный текст' ))->set_width( 100 ))),
+                Field::make( 'image', 'photo', __( ' Изображение' ))->set_width( 20 ),
+                Field::make( 'text', 'alt', __( ' "Alt" иконки' ))->set_width( 20 ),
+                Field::make( 'rich_text', 'info_text', __( ' Информационный текст' ))->set_width( 60 ),
+                Field::make( 'rich_text', 'info_text2', __( 'Дополнительный информационный текст' ))->set_width( 100 ),
+           )),
+
 
         Field::make( 'complex', 'stnr_block_second', 'Второй блок' )->set_layout( 'tabbed-horizontal' )->set_max(1)
             ->add_fields( array(

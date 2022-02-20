@@ -24,12 +24,12 @@ $new_banner_title = $span_content;
       if(!empty($banner_title)){ echo '<h2>'.$new_banner_title.'</h2>'; }
       echo '<div class="section_form">
               <div class="bro-sfirst-formtext">
-                 <strong>Смета </strong>' .$banner_price[0]['price'].'<br> 
-                 <strong>Монтаж </strong>' .$banner_price[1]['price'].'<br>';
+                 <div class="f_row align-items"><strong>Смета </strong>' .$banner_price[0]['price'].'</div> 
+                 <div class="f_row align-items"><strong>Монтаж </strong>' .$banner_price[1]['price'].'</div>';
                   if(!empty($stnr_price_discount)){
                       echo '<div class="f_row align-items">'. $stnr_price_discount .'</div>';
                   }
-      echo       '<strong>Цена </strong>' .$banner_price[2]['price'].'</div>
+      echo       '<div class="f_row align-items"><strong>Цена </strong>' .$banner_price[2]['price'].'</div></div>
               <div class="form-heading">
                 <p>Оставьте заявку на бесплатный расчет стоимости </p>
               </div>'
@@ -59,6 +59,11 @@ $new_banner_title = $span_content;
                 ?>
             </div>
         </div>
+          <?php
+          if(!empty($first_block[0]['info_text2'])){
+          echo   '<div class="stnr_prn_first"><div class="block_info">'.  wpautop($first_block[0]['info_text2']) .'</div></div>';
+          }
+        ?>
     </div>
     <?php
     $second_block = carbon_get_post_meta($post->ID, 'stnr_block_second');
@@ -207,7 +212,7 @@ $new_banner_title = $span_content;
     ?>
     <div class="services" style="background-image: url(<?php echo wp_get_attachment_image_url($services_bg[0]['background_img']) ?> )">
         <div class="service_block">
-           <?php echo $services_title?>
+           <?php echo wpautop($services_title)?>
             <div class="services_slider owl-carousel">
                 <?php
                 foreach ($services_slider as $service){
